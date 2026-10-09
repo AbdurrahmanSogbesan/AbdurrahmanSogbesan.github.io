@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Abdurrahman Sogbesan, full-stack engineer (React, Next.js, TypeScript, Node.js) based in Lagos.">
+<title>Abdurrahman Sogbesan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky identity column on the left, work log on the right; stacks to one column on phones. */
+:root {
+  --bg: #f6f7f5;
+  --surface: #ffffff;
+  --fg: #16201d;
+  --muted: #56635e;
+  --line: #dde3df;
+  --accent: #0e6b57;
+  --accent-soft: #e3f0ec;
+  --live: #1f9d55;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1513; --surface: #161e1b; --fg: #e6ece9; --muted: #9aa8a2;
+    --line: #26312d; --accent: #4fc9a8; --accent-soft: #17302a; --live: #4ade80;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1513; --surface: #161e1b; --fg: #e6ece9; --muted: #9aa8a2;
+  --line: #26312d; --accent: #4fc9a8; --accent-soft: #17302a; --live: #4ade80;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--body); font-size: 15.5px; line-height: 1.6;
+  padding-inline: 20px; padding-block: 0;
+}
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.wrap {
+  max-width: 1120px; margin: 0 auto;
+  display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 72px;
+  padding-block: 64px 80px;
+}
+@media (max-width: 860px) {
+  .wrap { grid-template-columns: minmax(0, 1fr); gap: 40px; padding-block: 36px 56px; }
+}
+
+/* Identity column */
+.id { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 48px); align-self: start; display: grid; gap: 22px; }
+@media (max-width: 860px) { .id { position: static; } }
+.id h1 {
+  font-family: var(--display); font-weight: 700; font-size: 2.6rem; line-height: 1.02;
+  letter-spacing: -0.02em; margin: 0; text-wrap: balance;
+}
+.role { font-family: var(--mono); font-size: 0.82rem; color: var(--accent); letter-spacing: 0.02em; margin: 0; }
+.summary { margin: 0; color: var(--muted); max-width: 42ch; }
+.status {
+  display: inline-flex; align-items: center; gap: 8px; width: fit-content;
+  font-size: 0.82rem; font-weight: 500; padding: 5px 12px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--fg);
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--live); box-shadow: 0 0 0 3px color-mix(in srgb, var(--live) 25%, transparent); }
+.links { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.92rem; }
+.links li { display: flex; gap: 10px; align-items: baseline; min-width: 0; }
+.links .k { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); width: 64px; flex: none; }
+.links .v { min-width: 0; overflow-wrap: anywhere; }
+.copy {
+  font: inherit; font-size: 0.75rem; color: var(--muted); background: none; border: 1px solid var(--line);
+  border-radius: 6px; padding: 1px 8px; cursor: pointer; margin-left: 6px;
+}
+.copy:hover { color: var(--fg); border-color: var(--muted); }
+.facts { display: flex; gap: 22px; flex-wrap: wrap; margin: 0; padding-top: 18px; border-top: 1px solid var(--line); }
+.facts div { display: grid; gap: 0; }
+.facts dt { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 0; font-family: var(--display); font-weight: 700; font-size: 1.35rem; font-variant-numeric: tabular-nums; }
+
+/* Content column */
+main { display: grid; gap: 64px; min-width: 0; }
+section { display: grid; gap: 22px; min-width: 0; }
+h2 {
+  font-family: var(--mono); font-weight: 500; font-size: 0.78rem; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--muted); margin: 0;
+  display: flex; align-items: center; gap: 14px;
+}
+h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+h3 { font-family: var(--display); font-weight: 700; font-size: 1.28rem; line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
+
+/* Projects */
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 640px) { .projects { grid-template-columns: minmax(0, 1fr); } }
+.proj {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 20px; display: flex; flex-direction: column; gap: 12px; min-width: 0;
+}
+.proj.feature { grid-column: 1 / -1; }
+.proj-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.proj-meta { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+.live {
+  flex: none; display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--live); padding-top: 4px;
+}
+.live .dot { width: 6px; height: 6px; box-shadow: none; }
+.proj p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+.proj p strong { color: var(--fg); font-weight: 600; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.tags li { font-family: var(--mono); font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--fg); }
+.visit { margin-top: auto; font-size: 0.9rem; font-weight: 500; }
+
+/* Experience */
+.job { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 24px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+.job:last-child { border-bottom: 0; padding-bottom: 0; }
+@media (max-width: 640px) { .job { grid-template-columns: minmax(0, 1fr); gap: 6px; } }
+.when { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); padding-top: 4px; font-variant-numeric: tabular-nums; }
+.job-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 10px; }
+.job-head .co { color: var(--accent); font-weight: 600; }
+.job ul { margin: 0 0 12px; padding-left: 18px; display: grid; gap: 6px; }
+.job li { padding-left: 2px; }
+.job li::marker { color: var(--accent); }
+
+/* Skills */
+.skills { display: grid; gap: 14px; margin: 0; }
+.skills div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 24px; }
+@media (max-width: 640px) { .skills div { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
+.skills dt { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); padding-top: 2px; }
+.skills dd { margin: 0; }
+
+.edu { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 24px; }
+@media (max-width: 640px) { .edu { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
+.edu p { margin: 0; }
+footer { color: var(--muted); font-size: 0.85rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .proj { transition: border-color .15s ease, transform .15s ease; }
+  .proj:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); transform: translateY(-2px); }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <aside class="id">
+    <p class="role">Full-stack engineer · Lagos, Nigeria (GMT+1)</p>
+    <h1>Abdurrahman Sogbesan</h1>
+    <p class="summary">I build product end to end in React, Next.js, TypeScript and Node.js. My recent work covers a crypto trading terminal, cross-platform billing, Web3 attribution dashboards and AI-powered SaaS tools, mostly in small remote teams where I own features from the data model to the UI.</p>
+    <span class="status"><span class="dot" aria-hidden="true"></span>Open to remote roles</span>
+    <ul class="links">
+      <li><span class="k">Email</span><span class="v">abdurrahman0803@gmail.com<button class="copy" type="button" id="copy-email" data-copy="abdurrahman0803@gmail.com">Copy</button></span></li>
+      <li><span class="k">GitHub</span><a class="v" href="https://github.com/AbdurrahmanSogbesan">github.com/AbdurrahmanSogbesan</a></li>
+      <li><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/abdurrahman-sogbesan">linkedin.com/in/abdurrahman-sogbesan</a></li>
+      <li><span class="k">Toptal</span><a class="v" href="https://www.toptal.com/developers/resume/abdurrahman-sogbesan">Verified expert profile</a></li>
+    </ul>
+    <dl class="facts">
+      <div><dt>Years</dt><dd>5</dd></div>
+      <div><dt>Companies</dt><dd>4</dd></div>
+      <div><dt>Live products</dt><dd>5</dd></div>
+    </dl>
+  </aside>
+
+  <main>
+    <section aria-labelledby="work">
+      <h2 id="work">Shipped work</h2>
+      <div class="projects">
+        <article class="proj feature">
+          <div class="proj-top">
+            <div>
+              <h3>Addressable</h3>
+              <div class="proj-meta">Web3 marketing attribution · Codygo · 2024–2026</div>
+            </div>
+            <span class="live"><span class="dot" aria-hidden="true"></span>Live</span>
+          </div>
+          <p>A marketing attribution platform for Web3 brands, covering <strong>7 blockchains</strong>. I owned core dashboards for campaign reporting, event analytics, campaign management and conversion attribution by channel, and shipped ad-channel integrations for display banners, social targeting, custom audiences and geo-targeting. I also drove performance work across the React frontend and AWS Lambda backend by cutting re-renders, decoupling API calls from page loads and tightening caching.</p>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>Next.js</li><li>AWS Lambda</li><li>Fastify</li><li>PostgreSQL</li><li>MongoDB</li><li>Zustand</li><li>Amplitude</li></ul>
+          <a class="visit" href="https://www.addressable.io/">addressable.io ↗</a>
+        </article>
+
+        <article class="proj">
+          <div class="proj-top">
+            <div>
+              <h3>Hyblock Capital</h3>
+              <div class="proj-meta">Crypto market analytics · Tempo · 2025–2026</div>
+            </div>
+            <span class="live"><span class="dot" aria-hidden="true"></span>Live</span>
+          </div>
+          <p>I led frontend work on the algorithmic trading terminal: the <strong>strategy builder</strong>, indicator configurator, run controls and backtesting visualisation, on top of live market data streamed over WebSockets into TradingView charts.</p>
+          <ul class="tags"><li>React</li><li>Next.js</li><li>TypeScript</li><li>WebSockets</li><li>TradingView</li></ul>
+          <a class="visit" href="https://hyblockcapital.com/">hyblockcapital.com ↗</a>
+        </article>
+
+        <article class="proj">
+          <div class="proj-top">
+            <div>
+              <h3>TruePresence</h3>
+              <div class="proj-meta">HIPAA-compliant wellbeing platform · Tempo · 2025–2026</div>
+            </div>
+            <span class="live"><span class="dot" aria-hidden="true"></span>Live</span>
+          </div>
+          <p>A platform connecting people with listeners, coaches and clinicians, on web, iOS and Android. I built <strong>Stripe and RevenueCat billing</strong> with web-to-mobile purchase reconciliation, role-aware subscription gating with tiers and grace periods, and a rule-based inbox automation engine.</p>
+          <ul class="tags"><li>Next.js</li><li>React Native</li><li>Supabase</li><li>Stripe</li><li>RevenueCat</li></ul>
+          <a class="visit" href="https://truepresence.com/">truepresence.com ↗</a>
+        </article>
+
+        <article class="proj">
+          <div class="proj-top">
+            <div>
+              <h3>BLOCO</h3>
+              <div class="proj-meta">Event ticketing · Pramie Technologies · 2021–2023</div>
+            </div>
+            <span class="live"><span class="dot" aria-hidden="true"></span>Live</span>
+          </div>
+          <p>A ticketing platform with <strong>over $7M in ticket sales</strong>. I worked on the admin dashboard (team management, commissions, white-label branding), the customer event app with promoter discovery and infinite-scroll lists, Stripe refunds and the checkout flow.</p>
+          <ul class="tags"><li>React</li><li>Next.js</li><li>TypeScript</li><li>Stripe</li></ul>
+          <a class="visit" href="https://bloco.co.uk/">bloco.co.uk ↗</a>
+        </article>
+
+        <article class="proj">
+          <div class="proj-top">
+            <div>
+              <h3>First Active 365</h3>
+              <div class="proj-meta">UK healthcare staffing · Pramie Technologies · 2021–2023</div>
+            </div>
+            <span class="live"><span class="dot" aria-hidden="true"></span>Live</span>
+          </div>
+          <p>A healthcare staffing platform with a Next.js web app and iOS and Android clients. I added a React Query caching layer that cut response times on data-heavy operator views by <strong>30%</strong>.</p>
+          <ul class="tags"><li>Next.js</li><li>React Query</li><li>TypeScript</li></ul>
+          <a class="visit" href="https://firstactive365.co.uk/">firstactive365.co.uk ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="side">
+      <h2 id="side">Side projects</h2>
+      <div class="projects">
+        <article class="proj">
+          <div class="proj-top">
+            <div>
+              <h3>AI Outpatient Triage</h3>
+              <div class="proj-meta">LLM triage system · Open source</div>
+            </div>
+          </div>
+          <p>A two-agent system that interviews patients and assigns a Manchester Triage System priority. One agent runs the interview and writes a structured clinical summary; a second acts as a referee on the triage decision to prevent under-triage. It reached <strong>96.7% triage accuracy with 0% under-triage</strong> in evaluation.</p>
+          <ul class="tags"><li>Next.js</li><li>React 19</li><li>TypeScript</li><li>Supabase</li><li>Vercel AI SDK</li><li>Zod</li></ul>
+          <a class="visit" href="https://github.com/AbdurrahmanSogbesan/ai-triage-app">View on GitHub ↗</a>
+        </article>
+        <article class="proj">
+          <div class="proj-top">
+            <div>
+              <h3>Debt Tracker</h3>
+              <div class="proj-meta">Mobile app · Built solo</div>
+            </div>
+          </div>
+          <p>A mobile app for managing shared group debts, built end to end. It supports split loans, loan transfers, email invitations, transaction history with infinite-scroll filtering, in-app notifications and several sign-in methods.</p>
+          <ul class="tags"><li>React Native</li><li>Expo</li><li>NestJS</li><li>Prisma</li><li>PostgreSQL</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="exp">
+      <h2 id="exp">Experience</h2>
+
+      <div class="job">
+        <div class="when">Dec 2025 – Jul 2026</div>
+        <div>
+          <div class="job-head"><h3>Full Stack Developer</h3><span class="co">Tempo</span></div>
+          <ul>
+            <li>Led the build of an algorithmic trading terminal for a crypto market analytics platform, owning the strategy builder, indicator configurator and backtesting visualisation.</li>
+            <li>Engineered end-to-end Stripe and RevenueCat billing with webhook handling and cross-platform purchase sync between web and mobile.</li>
+            <li>Designed a role-aware feature-gating system across server, web and mobile with tier-based access, grace periods and org member limits.</li>
+            <li>Architected a typed API layer on Supabase Edge Functions with auto-generated types, validation and RBAC helpers, reducing setup time for new endpoints by 40%.</li>
+          </ul>
+          <ul class="tags"><li>React</li><li>Next.js</li><li>React Native</li><li>Supabase</li><li>PostgreSQL</li><li>Stripe</li><li>WebSockets</li></ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Dec 2024 – Jun 2026</div>
+        <div>
+          <div class="job-head"><h3>Full Stack Developer</h3><span class="co">Codygo</span></div>
+          <ul>
+            <li>Built and shipped product features for a Web3 marketing platform, including campaign dashboards, event analytics and ad-channel integrations.</li>
+            <li>Upgraded a shared ESLint package to v9 and wrote a custom plugin with team-specific rules, reducing CI lint errors by 40%.</li>
+            <li>Increased test coverage by 20% with unit and integration tests covering critical user flows.</li>
+            <li>Improved performance across several applications by minimising re-renders and adding client and server-side caching.</li>
+            <li>Built embeddable AI chat widgets in Vue and React with file upload, markdown rendering, product carousels and response streaming, across 3+ AI-powered SaaS products.</li>
+          </ul>
+          <ul class="tags"><li>React</li><li>Vue 3</li><li>TypeScript</li><li>AWS Lambda</li><li>MongoDB</li><li>OpenAI API</li><li>Jest</li></ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Oct 2023 – Sep 2024</div>
+        <div>
+          <div class="job-head"><h3>Frontend Developer</h3><span class="co">ZeroComplex AI</span></div>
+          <ul>
+            <li>Delivered web features for a payment service used by over 500 active users, integrating Stripe and Paystack for wallet top-ups, auto-reload, card management and checkout.</li>
+            <li>Developed key features for a document extraction tool that used NLP and machine learning to process over 10,000 documents.</li>
+            <li>Built the assessment engine for a couples counselling platform used by 1,000+ couples, supporting MCQ and free-text quizzes with scored attempt history and retakes.</li>
+            <li>Integrated Sentry for client-side error tracking across key platforms, speeding up resolution of production issues.</li>
+          </ul>
+          <ul class="tags"><li>React</li><li>Next.js</li><li>TypeScript</li><li>Zustand</li><li>NextAuth</li><li>Sentry</li></ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Sep 2021 – Sep 2023</div>
+        <div>
+          <div class="job-head"><h3>Full Stack Developer</h3><span class="co">Pramie Technologies</span></div>
+          <ul>
+            <li>Developed GraphQL APIs with NestJS and TypeGraphQL for a roster scheduling Next.js app, covering turn rotation, invitations, scheduled reminders and Google Calendar sync. This cut API development time by 20% and improved frontend performance by 25%.</li>
+            <li>Built and documented reusable React components in Storybook for a virtual office assistant product.</li>
+            <li>Automated database seeders and API provisioning for scheduler jobs, reducing setup time by 50%.</li>
+            <li>Reduced response times by 30% using caching with React Query and MobX State Tree.</li>
+            <li>Integrated Stripe for one-time and subscription payments on a ticket distribution web app.</li>
+          </ul>
+          <ul class="tags"><li>React</li><li>Next.js</li><li>NestJS</li><li>GraphQL</li><li>Apollo</li><li>Prisma</li><li>PostgreSQL</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">Skills</h2>
+      <dl class="skills">
+        <div><dt>Languages</dt><dd>TypeScript, JavaScript, Python, SQL, GraphQL, HTML, CSS</dd></div>
+        <div><dt>Frontend</dt><dd>React, Next.js, React Native, Expo, Vue 3, Tailwind CSS, Zustand, Redux, React Query, Framer Motion</dd></div>
+        <div><dt>Backend</dt><dd>Node.js, NestJS, Express, Fastify, Supabase Edge Functions, AWS Lambda, REST and GraphQL API design</dd></div>
+        <div><dt>Data</dt><dd>PostgreSQL, MongoDB, Prisma</dd></div>
+        <div><dt>Integrations</dt><dd>Stripe, RevenueCat, Paystack, OpenAI API, WebSockets, Sentry, Amplitude, Google Calendar API</dd></div>
+        <div><dt>Tooling</dt><dd>Git, Docker, AWS CDK, Vercel, Jest, Vitest, Playwright, CI/CD, Claude Code</dd></div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="edu">
+      <h2 id="edu">Education</h2>
+      <div class="edu">
+        <div class="when">BSc</div>
+        <p><strong>Computer Science</strong>, University of Lagos</p>
+      </div>
+    </section>
+
+    <footer>Full CV available on request at abdurrahman0803@gmail.com.</footer>
+  </main>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var text = btn.getAttribute('data-copy');
+    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+    try {
+      navigator.clipboard.writeText(text).then(done).catch(function () { selectText(btn.previousSibling); });
+    } catch (e) { selectText(btn.previousSibling); }
+  });
+});
+function selectText(node) {
+  try { var r = document.createRange(); r.selectNodeContents(node.parentNode); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) {}
+}
+</script>
+</body>
+</html>
