@@ -1,0 +1,22 @@
+<!-- The nav mark: the `TempoMark` path from components/TempoLogo.tsx, verbatim.
+     It knocks the "T" out of its tile (fillRule="evenodd"), so a white shape
+     behind it is what makes the letterform read white.
+
+     Deliberately FULL-BLEED with no transparency anywhere. Safari does not
+     composite favicon alpha against the tab — it flattens it onto white — so
+     any transparent region comes back as a white frame around the icon (this
+     is why the old circle mark showed up as "a circle on a white square").
+     The first rect fills the corners the rounded tile leaves behind, in the
+     same colour as the tile, so there is no alpha for Safari to whiten. The
+     visible result is a solid dark square; the tile's rounded corners are
+     kept in the path but no longer read, which is the trade we want.
+
+     The white rect is INSET rather than full-bleed on purpose: it only has to
+     sit under the glyph (bbox x 5.03-20.10, y 5.83-21.41) and be covered by
+     the tile everywhere else. A full-bleed white rect would paint the corners
+     white again, since the rounded path doesn't cover them. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.1282 25">
+  <rect width="25.1282" height="25" fill="#0a0a0a"/>
+  <rect x="4" y="4" width="17.2" height="17.6" fill="#ffffff"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.02564 0C2.25005 0 0 2.23857 0 5V20C0 22.7614 2.25005 25 5.02564 25H20.1026C22.8781 25 25.1282 22.7614 25.1282 20V5C25.1282 2.23857 22.8781 0 20.1026 0H5.02564ZM18.9538 7.4405L20.1026 5.83335H5.02564L6.1745 7.4405H11.6931L11.681 20.3411L12.5014 21.4125L13.3219 20.3411L13.3339 7.4405H18.9538ZM9.76733 17.619L11.1347 19.2262V7.9762H6.55761L7.51504 9.3155H9.77316L9.76733 17.619ZM13.8693 19.2262L15.2313 17.619V9.3155H17.6135L18.5708 7.9762H13.8693V19.2262Z" fill="#0a0a0a"/>
+</svg>

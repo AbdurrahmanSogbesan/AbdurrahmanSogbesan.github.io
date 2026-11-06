@@ -13,7 +13,7 @@ export const about = {
     school: 'University of Lagos',
     initials: 'UL',
     /** Logo under /public once supplied. null = initials chip. */
-    logo: null as string | null,
+    logo: '/logos/unilag.png' as string | null,
   },
 };
 

@@ -7,7 +7,7 @@ export const companies: Record<CompanyKey, Company> = {
     name: 'Tempo',
     url: 'https://www.tempo.new/',
     initial: 'T',
-    logo: null,
+    logo: '/logos/tempo.svg',
     card: { domain: 'tempo.new', blurb: 'AI software factory for product teams', screenshot: null },
   },
   codygo: {
@@ -15,7 +15,7 @@ export const companies: Record<CompanyKey, Company> = {
     name: 'Codygo',
     url: 'https://codygo.com/',
     initial: 'C',
-    logo: null,
+    logo: '/logos/codygo.svg',
     card: { domain: 'codygo.com', blurb: 'GenAI full-stack studio for AI apps and cloud systems', screenshot: null },
   },
   zerocomplex: {
@@ -23,7 +23,7 @@ export const companies: Record<CompanyKey, Company> = {
     name: 'ZeroComplex AI',
     url: 'https://www.zerocomplex.ai/',
     initial: 'Z',
-    logo: null,
+    logo: '/logos/zerocomplex.png',
     card: { domain: 'zerocomplex.ai', blurb: 'Custom autonomous systems and software products', screenshot: null },
   },
   pramie: {
@@ -31,7 +31,7 @@ export const companies: Record<CompanyKey, Company> = {
     name: 'Pramie Technologies',
     url: 'https://www.pramie.tech/',
     initial: 'P',
-    logo: null,
+    logo: '/logos/pramie.png',
     card: { domain: 'pramie.tech', blurb: 'Web and mobile apps, from idea to launch', screenshot: null },
   },
 };
