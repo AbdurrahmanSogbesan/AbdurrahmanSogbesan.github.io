@@ -1,4 +1,5 @@
 // About page copy (intro). Experience and Toolbox live in experience.ts and tools.ts.
+import { site } from './site';
 
 export const about = {
   heading: "I'm Abdurrahman, a full-stack engineer based in Lagos.",
@@ -18,7 +19,7 @@ export const notFound = {
   index: [
     { n: '01', label: 'Home', href: '/', note: 'What I build, and selected work' },
     { n: '02', label: 'About', href: '/about', note: 'Experience and toolbox' },
-    { n: '03', label: 'Résumé', href: '/resume.pdf', note: 'One page, PDF' },
+    { n: '03', label: 'Résumé', href: site.resumeUrl, note: 'One page, PDF' },
     { n: '04', label: 'Email', href: 'mailto:abdurrahmansogbesan@gmail.com', note: 'abdurrahmansogbesan@gmail.com' },
   ],
 };

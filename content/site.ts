@@ -1,5 +1,8 @@
 // Site-wide copy: identity, links, nav, footer and small UI strings.
 
+/** Résumé on Google Drive (nav, link pill, 404 index). Update the file via Drive → Manage versions to keep this link. */
+const resumeUrl = 'https://drive.google.com/file/d/1z9IlKc1b9b7N8fSVGlUohEQu4L5xIae_/view?usp=sharing';
+
 export const site = {
   name: 'Abdurrahman Sogbesan',
   title: 'Full-stack Engineer',
@@ -8,13 +11,12 @@ export const site = {
   copyrightYear: 2026,
   /** Production origin. metadataBase (OG/Twitter absolute URLs) derives from this. */
   url: 'https://abdurrahmansogbesan.github.io',
-  /** Résumé PDF under /public. Placeholder until supplied. */
-  resumeUrl: '/resume.pdf',
+  resumeUrl,
 
   nav: [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Résumé', href: '/resume.pdf', external: true },
+    { label: 'Résumé', href: resumeUrl, external: true },
   ],
 
   availability: 'Open to full-time remote roles and contract work',
@@ -24,7 +26,7 @@ export const site = {
     { label: 'GitHub', href: 'https://github.com/AbdurrahmanSogbesan', icon: 'code' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/abdurrahman-sogbesan', icon: 'briefcase' },
     { label: 'Email', href: 'mailto:abdurrahmansogbesan@gmail.com', icon: 'mail' },
-    { label: 'Résumé', href: '/resume.pdf', icon: 'file' },
+    { label: 'Résumé', href: resumeUrl, icon: 'file' },
   ],
 
   footer: {
