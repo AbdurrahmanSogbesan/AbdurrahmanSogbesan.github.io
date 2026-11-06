@@ -6,6 +6,8 @@ export const site = {
   location: 'Lagos, Nigeria',
   email: 'abdurrahmansogbesan@gmail.com',
   copyrightYear: 2026,
+  /** Production origin. metadataBase (OG/Twitter absolute URLs) derives from this. */
+  url: 'https://abdurrahmansogbesan.github.io',
   /** Résumé PDF under /public. Placeholder until supplied. */
   resumeUrl: '/resume.pdf',
 
@@ -44,11 +46,28 @@ export const site = {
     themeToLight: 'Switch to light theme',
     retroToast: 'Retro mode unlocked · +30 lives',
     retroClose: 'Close and end retro mode',
+    /** Hover-card placeholder tile until a screenshot is supplied: "<company name> landing page". */
+    landingPageSuffix: 'landing page',
+    /** Labels for assistive tech only (aria-label on links, navs and groups). */
+    a11y: {
+      homeLink: 'Abdurrahman Sogbesan, home',
+      mainNav: 'Main',
+      mobileNav: 'Mobile',
+      filterProjects: 'Filter projects',
+      pagesIndex: 'Pages on this site',
+      /** Followed by the email address. */
+      copyEmail: 'Copy email address',
+    },
   },
 
   meta: {
     description:
       'Abdurrahman Sogbesan, a full-stack engineer in Lagos building web and mobile products with TypeScript, React, Next.js and NestJS.',
+    titles: {
+      home: 'Abdurrahman Sogbesan',
+      about: 'About · Abdurrahman Sogbesan',
+      notFound: 'Page not found',
+    },
   },
 
   /** Printed once to the browser console on load (see HANDOFF.md, Easter eggs). */

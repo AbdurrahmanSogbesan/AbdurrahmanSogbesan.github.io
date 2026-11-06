@@ -2,3 +2,4 @@ content/
 .next/
 out/
 package-lock.json
+app/globals.css
