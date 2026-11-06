@@ -37,7 +37,7 @@ export default function Header() {
     >
       <Link className="brand" href="/" aria-label={site.ui.a11y.homeLink}>
         <Monogram />
-        <span className="brandtext" style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.3 }}>
+        <span className="brandtext">
           <span style={{ fontSize: '14.5px', fontWeight: 500, color: 'var(--fg)' }}>{site.name}</span>
           <span className="mono" style={{ color: 'var(--muted)' }}>
             {site.title}
