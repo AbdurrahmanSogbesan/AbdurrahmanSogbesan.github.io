@@ -67,12 +67,12 @@ export const projects: Project[] = [
     screenshots: [],
   },
   {
-    slug: 'doculess',
-    name: 'Doculess',
-    description: 'AI platform that pulls structured data out of business documents.',
+    slug: 'triage-clinic',
+    name: 'Triage Clinic',
+    description: 'AI-assisted outpatient triage that turns a patient interview into a clinical note.',
     platforms: ['web'],
-    year: '2024',
-    preview: { frame: 'browser', path: 'doculess / templates', hue: 345, look: 'list' },
+    year: '2026',
+    preview: { frame: 'browser', path: 'triage / intake', hue: 170, look: 'list' },
     screenshots: [],
   },
 ];
