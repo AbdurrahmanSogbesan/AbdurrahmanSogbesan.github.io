@@ -1,0 +1,78 @@
+import type { Project } from './types';
+
+// Selected work, in display order. The first `site.ui.initialProjectCount` (6) show on load.
+// Meta line under each card: platforms joined with " + " (Web, Mobile), then " · " and the year.
+export const projects: Project[] = [
+  {
+    slug: 'addressable',
+    name: 'Addressable',
+    description: 'Web3 marketing platform that ties ad spend to on-chain conversions.',
+    platforms: ['web'],
+    year: '2025',
+    preview: { frame: 'browser', path: 'addressable / campaigns', hue: 210, look: 'chart' },
+    screenshots: [],
+  },
+  {
+    slug: 'bloco',
+    name: 'BLOCO',
+    description: 'Event ticketing platform for promoters, with $7M+ in ticket sales.',
+    platforms: ['web', 'mobile'],
+    year: '2023',
+    preview: { frame: 'browser', path: 'bloco / events', hue: 265, look: 'chart' },
+    screenshots: [],
+  },
+  {
+    slug: 'truepresence',
+    name: 'TruePresence',
+    description: 'HIPAA-compliant app connecting people with coaches and clinicians.',
+    platforms: ['web', 'mobile'],
+    year: '2026',
+    preview: { frame: 'phones', hue: 32 },
+    screenshots: [],
+  },
+  {
+    slug: 'first-active-365',
+    name: 'First Active 365',
+    description: 'UK platform matching healthcare professionals with shifts.',
+    platforms: ['web', 'mobile'],
+    year: '2023',
+    preview: { frame: 'browser', path: 'firstactive365 / shifts', hue: 120, look: 'list' },
+    screenshots: [],
+  },
+  {
+    slug: 'hyblock-capital',
+    name: 'Hyblock Capital',
+    description: 'Crypto market analytics and trading tools for retail and pro traders.',
+    platforms: ['web'],
+    year: '2026',
+    preview: { frame: 'browser', path: 'hyblock / terminal', hue: 150, look: 'chart' },
+    screenshots: [],
+  },
+  {
+    slug: 'debt-tracker',
+    name: 'Debt Tracker',
+    description: 'Track shared debts and split loans across groups of friends.',
+    platforms: ['mobile'],
+    year: '2025',
+    preview: { frame: 'phones', hue: 100 },
+    screenshots: [],
+  },
+  {
+    slug: 'knextt',
+    name: 'Knextt',
+    description: 'Roster scheduling app that rotates teams through shared duties.',
+    platforms: ['web'],
+    year: '2023',
+    preview: { frame: 'browser', path: 'knextt / roster', hue: 190, look: 'list' },
+    screenshots: [],
+  },
+  {
+    slug: 'doculess',
+    name: 'Doculess',
+    description: 'AI platform that pulls structured data out of business documents.',
+    platforms: ['web'],
+    year: '2024',
+    preview: { frame: 'browser', path: 'doculess / templates', hue: 345, look: 'list' },
+    screenshots: [],
+  },
+];

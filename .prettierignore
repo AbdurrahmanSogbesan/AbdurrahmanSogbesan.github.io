@@ -1,0 +1,4 @@
+content/
+.next/
+out/
+package-lock.json
