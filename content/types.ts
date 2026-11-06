@@ -3,6 +3,8 @@
 
 export type CompanyKey = 'tempo' | 'codygo' | 'zerocomplex' | 'pramie';
 
+export type LogoTile = 'light' | 'dark';
+
 export interface Company {
   key: CompanyKey;
   name: string;
@@ -11,6 +13,8 @@ export interface Company {
   initial: string;
   /** Path under /public, e.g. '/logos/tempo.svg'. null = use the initial chip. */
   logo: string | null;
+  /** Background tone baked into the logo file. Default 'light' (white tile); 'dark' tiles never get the chip border. */
+  logoTile?: LogoTile;
   /** Hover card (desktop only). */
   card: {
     domain: string;

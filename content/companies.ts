@@ -8,6 +8,7 @@ export const companies: Record<CompanyKey, Company> = {
     url: 'https://www.tempo.new/',
     initial: 'T',
     logo: '/logos/tempo.svg',
+    logoTile: 'dark',
     card: { domain: 'tempo.new', blurb: 'AI software factory for product teams', screenshot: null },
   },
   codygo: {
