@@ -1,20 +1,13 @@
-// About page copy (intro + education). Experience and Toolbox live in experience.ts and tools.ts.
+// About page copy (intro). Experience and Toolbox live in experience.ts and tools.ts.
 
 export const about = {
   heading: "I'm Abdurrahman, a full-stack engineer based in Lagos.",
   paragraphs: [
-    "I'm happiest shipping: taking a feature from a rough idea to production, across the API, the types that hold it together and the interface people actually use. I've spent most of my career as a proactive individual contributor, the one who picks up the unclear thing and gets it moving.",
-    "I've worked across fintech, Web3, AI, healthcare and event ticketing, on web and mobile, frontend and backend. I also like tooling that makes a team faster: at Codygo I wrote ESLint rules that ended up in every company codebase.",
-    'Outside work I take long walks, train at the gym, play games, and catch up on TV shows.',
+    "I joined Pramie as a frontend developer and ended up as the only backend developer on one of its products, which is pretty much how I like to work: I'd rather take a feature from the schema all the way to the screen than hand it off halfway. I'm usually the one who grabs the vague ticket nobody's sure about yet and turns it into something that ships.",
+    "The products have varied a lot: a crypto trading terminal, a ticketing platform that's sold over $7M in tickets, a HIPAA-compliant health app and the analytics side of a Web3 marketing tool. I've also got a soft spot for tooling that saves a team time; at Codygo I wrote ESLint rules for the bugs we kept hitting, like silent failures and deep imports, and they ended up in a shared package every Codygo codebase uses.",
+    "Most of my best ideas turn up on long walks, which is my excuse for taking so many. When I'm not walking I'm at the gym or working through far too many TV shows at once, and FIFA is the one game I still make time for.",
   ],
-  labels: { experience: 'Experience', toolbox: 'Toolbox', education: 'Education' },
-  education: {
-    degree: 'BSc Computer Science',
-    school: 'University of Lagos',
-    initials: 'UL',
-    /** Logo under /public once supplied. null = initials chip. */
-    logo: '/logos/unilag.png' as string | null,
-  },
+  labels: { experience: 'Experience', toolbox: 'Toolbox' },
 };
 
 // 404 page copy (editorial direction "A").
