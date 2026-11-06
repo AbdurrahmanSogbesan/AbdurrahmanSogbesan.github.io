@@ -35,7 +35,6 @@ export default function Header() {
         alignItems: 'center',
         justifyContent: 'space-between',
         gap: '16px',
-        padding: '36px 0 0',
       }}
     >
       <Link className="brand" href="/" aria-label={site.ui.a11y.homeLink} onPointerDown={onMarkPointerDown}>

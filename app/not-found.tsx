@@ -44,7 +44,7 @@ export default function NotFound() {
         </nav>
       </main>
 
-      <footer style={{ marginTop: '120px', padding: '32px 0 48px', borderTop: '1px solid var(--line)' }}>
+      <footer style={{ marginTop: '72px', padding: '32px 0 48px', borderTop: '1px solid var(--line)' }}>
         <p className="mono" style={{ margin: 0, color: 'var(--muted)', fontSize: '11.5px' }}>
           {site.location} · © {site.copyrightYear}
         </p>
