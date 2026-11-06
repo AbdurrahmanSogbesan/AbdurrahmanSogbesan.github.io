@@ -9,7 +9,7 @@ export const companies: Record<CompanyKey, Company> = {
     initial: 'T',
     logo: '/logos/tempo.svg',
     logoTile: 'dark',
-    card: { domain: 'tempo.new', blurb: 'AI software factory for product teams', screenshot: null },
+    card: { domain: 'tempo.new', blurb: 'One IDE for the whole team, from specs to pull requests', screenshot: '/screenshots/tempo.jpg' },
   },
   codygo: {
     key: 'codygo',
@@ -17,7 +17,7 @@ export const companies: Record<CompanyKey, Company> = {
     url: 'https://codygo.com/',
     initial: 'C',
     logo: '/logos/codygo.svg',
-    card: { domain: 'codygo.com', blurb: 'GenAI full-stack studio for AI apps and cloud systems', screenshot: null },
+    card: { domain: 'codygo.com', blurb: 'GenAI full-stack studio for AI apps and cloud systems', screenshot: '/screenshots/codygo.jpg' },
   },
   zerocomplex: {
     key: 'zerocomplex',
@@ -25,7 +25,7 @@ export const companies: Record<CompanyKey, Company> = {
     url: 'https://www.zerocomplex.ai/',
     initial: 'Z',
     logo: '/logos/zerocomplex.png',
-    card: { domain: 'zerocomplex.ai', blurb: 'Custom autonomous systems and software products', screenshot: null },
+    card: { domain: 'zerocomplex.ai', blurb: 'Custom autonomous systems and software products', screenshot: '/screenshots/zerocomplex.jpg' },
   },
   pramie: {
     key: 'pramie',
@@ -33,6 +33,6 @@ export const companies: Record<CompanyKey, Company> = {
     url: 'https://www.pramie.tech/',
     initial: 'P',
     logo: '/logos/pramie.png',
-    card: { domain: 'pramie.tech', blurb: 'Web and mobile apps, from idea to launch', screenshot: null },
+    card: { domain: 'pramie.tech', blurb: 'Web and mobile apps, from idea to launch', screenshot: '/screenshots/pramie.jpg' },
   },
 };
