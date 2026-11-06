@@ -21,7 +21,7 @@ export default function ExperienceItem({ entry, open, onToggle }: Props) {
         onClick={hasBullets ? onToggle : undefined}
         aria-expanded={hasBullets ? isOpen : undefined}
       >
-        <LogoChip logo={company.logo} initials={company.initial} />
+        <LogoChip logo={company.logo} initials={company.initial} tile={company.logoTile} />
         <span style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '3px' }}>
           <span style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '12px' }}>
             <span style={{ display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', gap: '4px 10px', minWidth: 0 }}>
