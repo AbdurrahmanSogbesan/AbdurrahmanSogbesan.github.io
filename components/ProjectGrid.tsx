@@ -20,7 +20,7 @@ export default function ProjectGrid() {
   const hidden = Math.max(0, projects.length - limit);
 
   return (
-    <section className="rise" aria-labelledby="work-label" style={{ padding: '104px 0 0', animationDelay: '100ms' }}>
+    <section className="rise" aria-labelledby="work-label" style={{ padding: '72px 0 0', animationDelay: '100ms' }}>
       <div
         style={{
           display: 'flex',
