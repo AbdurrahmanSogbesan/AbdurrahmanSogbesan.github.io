@@ -3,3 +3,4 @@ content/
 out/
 package-lock.json
 app/globals.css
+components/toolIconData.ts

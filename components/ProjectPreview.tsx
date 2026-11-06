@@ -107,7 +107,7 @@ function Phones({ project }: { project: Project }) {
       {phoneSkeletons.map((skeleton, i) => {
         const shot = project.screenshots[i];
         return (
-          <div key={i} className={i === 1 ? 'phone mid' : 'phone'}>
+          <div key={i} className={['phone', i === 1 && 'mid', shot && 'has-shot'].filter(Boolean).join(' ')}>
             {shot ? <Shot src={shot} /> : skeleton.map((style, j) => sk(style, j))}
           </div>
         );
