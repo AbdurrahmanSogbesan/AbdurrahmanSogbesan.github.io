@@ -3,8 +3,9 @@ import ExperienceList from '@/components/ExperienceList';
 import LogoChip from '@/components/LogoChip';
 import ToolboxRow from '@/components/ToolboxRow';
 import { about, site, tools } from '@/content';
+import { pageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = { title: site.meta.titles.about };
+export const metadata: Metadata = pageMetadata(site.meta.titles.about, '/about/');
 
 export default function AboutPage() {
   const { education } = about;

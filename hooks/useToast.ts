@@ -9,7 +9,7 @@ export interface ToastState {
   visible: boolean;
 }
 
-interface ToastApi {
+export interface ToastApi {
   /** Replaces whatever is showing (toasts never stack). `ms` = auto-hide delay; omit to keep it up. */
   show: (message: string, kind: ToastKind, ms?: number) => void;
   /** Hides the toast if it is of this kind (or any kind when omitted). */

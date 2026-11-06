@@ -1,7 +1,8 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 import { site } from '@/content';
+import { pageMetadata } from '@/lib/metadata';
 import { themeBootstrapScript } from '@/lib/theme';
 import './globals.css';
 
@@ -11,8 +12,27 @@ const geistMono = Geist_Mono({ subsets: ['latin'], weight: ['400', '500'], varia
 const unbounded = localFont({ src: './fonts/unbounded-as.woff2', weight: '800', variable: '--font-unbounded' });
 
 export const metadata: Metadata = {
-  title: site.meta.titles.home,
+  ...pageMetadata(site.meta.titles.home, '/'),
+  metadataBase: new URL(site.url),
   description: site.meta.description,
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#F6F4EF' },
+    { media: '(prefers-color-scheme: dark)', color: '#0A0A0A' },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {

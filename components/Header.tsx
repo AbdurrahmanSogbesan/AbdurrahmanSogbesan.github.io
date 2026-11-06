@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, type KeyboardEvent } from 'react';
 import { site } from '@/content';
+import { useRetro, useSevenTaps } from '@/hooks/useRetroMode';
 import { isCurrentPath } from '@/lib/links';
 import AppLink from './AppLink';
 import { MenuButton, MenuPanel } from './MobileMenu';
@@ -13,6 +14,8 @@ import ThemeToggle from './ThemeToggle';
 export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  // No retro context on the 404, so the taps do nothing there.
+  const onMarkPointerDown = useSevenTaps(useRetro()?.start);
   const closeMenu = () => setMenuOpen(false);
 
   const onKeyDown = (e: KeyboardEvent<HTMLElement>) => {
@@ -35,7 +38,7 @@ export default function Header() {
         padding: '36px 0 0',
       }}
     >
-      <Link className="brand" href="/" aria-label={site.ui.a11y.homeLink}>
+      <Link className="brand" href="/" aria-label={site.ui.a11y.homeLink} onPointerDown={onMarkPointerDown}>
         <Monogram />
         <span className="brandtext">
           <span style={{ fontSize: '14.5px', fontWeight: 500, color: 'var(--fg)' }}>{site.name}</span>
