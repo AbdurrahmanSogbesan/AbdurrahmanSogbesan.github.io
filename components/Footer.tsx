@@ -4,7 +4,8 @@ import { site } from '@/content';
 import { useToast } from '@/hooks/useToast';
 import { ArrowUpRight, CopyIcon } from './icons';
 
-export default function Footer() {
+/** `divider`: the top hairline. About turns it off because its Toolbox list already ends on a line. */
+export default function Footer({ divider = true }: { divider?: boolean }) {
   const toast = useToast();
 
   const copyEmail = () => {
@@ -19,9 +20,9 @@ export default function Footer() {
   return (
     <footer
       style={{
-        marginTop: '120px',
-        padding: '64px 0 48px',
-        borderTop: '1px solid var(--line)',
+        marginTop: '72px',
+        padding: '48px 0 48px',
+        borderTop: divider ? '1px solid var(--line)' : undefined,
         display: 'flex',
         flexDirection: 'column',
         gap: '28px',
