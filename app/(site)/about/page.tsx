@@ -5,7 +5,7 @@ import ToolboxRow from '@/components/ToolboxRow';
 import { about, site, tools } from '@/content';
 import { pageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = pageMetadata(site.meta.titles.about, '/about/');
+export const metadata: Metadata = pageMetadata(site.meta.titles.about, '/about/', 'about');
 
 export default function AboutPage() {
   const { education } = about;

@@ -68,6 +68,13 @@ export const site = {
       about: 'About · Abdurrahman Sogbesan',
       notFound: 'Page not found',
     },
+    /** Stack line on the OG images (bottom right). */
+    ogStack: 'TypeScript · React · Next.js · Node.js',
+    /** og:image:alt / twitter:image:alt for og-default.png and og-about.png. */
+    ogImageAlt: {
+      default: 'Abdurrahman Sogbesan, Full-stack Engineer in Lagos',
+      about: 'About Abdurrahman Sogbesan, Full-stack Engineer in Lagos',
+    },
   },
 
   /** Printed once to the browser console on load (see HANDOFF.md, Easter eggs). */
