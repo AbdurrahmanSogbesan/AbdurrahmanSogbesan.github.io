@@ -99,22 +99,12 @@ html[data-vt="fade"]::view-transition-new(root){animation-duration:150ms;animati
 .logochip{width:36px;height:36px;flex:none;border-radius:10px;background:var(--chip);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--font-geist-mono),ui-monospace,monospace;font-size:12px;font-weight:500;color:var(--fg)}
 .exp{border-top:1px solid var(--line)}
 .exp:last-child{border-bottom:1px solid var(--line)}
-.exphead{width:100%;display:flex;gap:16px;align-items:flex-start;padding:22px 4px;background:none;border:0;cursor:pointer;text-align:left;font:inherit;color:inherit;border-radius:10px}
-.exphead.static{cursor:default}
+.exprow{width:100%;display:flex;gap:16px;align-items:flex-start;padding:22px 4px}
 .coname{min-width:0;overflow-wrap:anywhere;font-size:15.5px;font-weight:500;color:var(--fg);line-height:1.4}
-.chev{color:var(--muted);flex:none;align-self:flex-start;margin-top:4px;transition:transform 200ms var(--ease-out)}
-.exp.open .chev{transform:rotate(180deg)}
-.expbody{display:grid;grid-template-rows:0fr;transition:grid-template-rows 160ms var(--ease-out)}
-.exp.open .expbody{grid-template-rows:1fr;transition-duration:220ms}
-.expinner{overflow:hidden;opacity:0;transition:opacity 120ms var(--ease-out)}
-.exp.open .expinner{opacity:1;transition-duration:220ms}
-.expinner ul{margin:0;padding:0 4px 24px 56px;list-style:none;display:flex;flex-direction:column;gap:9px}
-.expinner li{position:relative;font-size:14.5px;line-height:1.6;padding-left:18px;overflow-wrap:anywhere}
-.expinner li::before{content:'';position:absolute;left:0;top:.75em;width:7px;height:1px;background:var(--muted)}
 .chip{display:inline-flex;align-items:center;gap:7px;height:30px;padding:0 11px 0 5px;border:1px solid var(--line2);border-radius:999px;font-size:13px;color:var(--fg);line-height:1}
 .chip b{display:grid;place-items:center;min-width:20px;height:20px;padding:0 4px;border-radius:999px;background:var(--chip);font-family:var(--font-geist-mono),ui-monospace,monospace;font-size:9.5px;font-weight:500;color:var(--body)}
 .toolrow{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--line);align-items:center}
-@media (max-width:560px){.toolrow{grid-template-columns:minmax(0,1fr);gap:10px}.expinner ul{padding-left:4px}.dates{display:none}.datesm{display:block!important}}
+@media (max-width:560px){.toolrow{grid-template-columns:minmax(0,1fr);gap:10px}.dates{display:none}.datesm{display:block!important}}
 
 /* ───────── About page (design/About.dc.html <helmet>) ───────── */
 .site .chip{gap:8px;padding:0 12px 0 10px}
@@ -171,7 +161,6 @@ html[data-vt="fade"]::view-transition-new(root){animation-duration:150ms;animati
   .quiet:hover{color:var(--accent);border-color:var(--accent)}
   .copy:hover,.copy:hover svg{color:var(--accent)}
   .solid:hover{opacity:.86}
-  .exphead:not(.static):hover .chev,.exphead:not(.static):hover .coname{color:var(--accent)}
   .stamp a:hover{text-decoration-color:currentColor}
   .tclose:hover{opacity:1}
 }
@@ -183,8 +172,6 @@ html[data-vt="fade"]::view-transition-new(root){animation-duration:150ms;animati
   .brand:active,.nav:active,.iconbtn:active,.menubtn:active,.pillbtn:active,.filter:active,.quiet:active,.copy:active,.solid:active,.tclose:active{transform:none}
   .pop,.co:focus-within .pop{transform:translate(-50%,0)}
   .toast,.toast.show{transform:none}
-  .chev{transition:none}
-  .expbody{transition:none}
 }
 @media (prefers-reduced-motion:reduce) and (hover:hover) and (pointer:fine){
   .co:hover .pop{transform:translate(-50%,0)}
