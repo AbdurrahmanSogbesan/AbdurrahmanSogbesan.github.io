@@ -49,6 +49,8 @@ export interface Project {
   };
   /** Real screenshot(s) under /public. Empty = render the skeleton preview. */
   screenshots: string[];
+  /** Live site. When set, the whole card links to it (new tab). */
+  url?: string;
 }
 
 export interface ExperienceEntry {
