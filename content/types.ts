@@ -56,7 +56,6 @@ export interface ExperienceEntry {
   role: string;
   dates: string;
   summary: string;
-  bullets: string[];
 }
 
 export type IconRef =
