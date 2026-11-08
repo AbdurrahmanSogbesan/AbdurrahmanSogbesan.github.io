@@ -16,7 +16,7 @@ export const projectDetails: Record<string, ProjectDetails> = {
   },
   "bloco": {
     company: "Pramie Technologies",
-    role: "Full-stack Developer",
+    role: "Frontend Developer",
     stack: ["Next.js", "TypeScript", "React Query", "Stripe"],
     liveUrl: "https://bloco.co.uk/",
     did: [
@@ -48,7 +48,7 @@ export const projectDetails: Record<string, ProjectDetails> = {
   },
   "hyblock-capital": {
     company: "Tempo",
-    role: "Frontend Lead",
+    role: "Lead Frontend Developer",
     stack: ["Next.js", "TypeScript", "RTK Query", "WebSockets"],
     liveUrl: "https://hyblockcapital.com/",
     did: [
