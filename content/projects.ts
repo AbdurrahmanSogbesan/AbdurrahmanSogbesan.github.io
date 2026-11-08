@@ -11,7 +11,8 @@ export const projects: Project[] = [
     platforms: ['web'],
     year: '2025',
     preview: { frame: 'browser', path: 'addressable.io', hue: 210, look: 'chart' },
-    screenshots: ['/screenshots/projects/addressable.jpg'],
+    screenshots: ['/screenshots/projects/addressable-card.png'],
+    detailShots: ['/screenshots/projects/addressable.png'],
   },
   {
     slug: 'bloco',
@@ -20,7 +21,8 @@ export const projects: Project[] = [
     platforms: ['web', 'mobile'],
     year: '2023',
     preview: { frame: 'browser', path: 'bloco.co.uk', hue: 265, look: 'chart' },
-    screenshots: ['/screenshots/projects/bloco.jpg'],
+    screenshots: ['/screenshots/projects/bloco-card.png'],
+    detailShots: ['/screenshots/projects/bloco.png'],
   },
   {
     slug: 'truepresence',
@@ -29,11 +31,8 @@ export const projects: Project[] = [
     platforms: ['web', 'mobile'],
     year: '2026',
     preview: { frame: 'phones', hue: 32 },
-    screenshots: [
-      '/screenshots/projects/truepresence-1.png',
-      '/screenshots/projects/truepresence-2.png',
-      '/screenshots/projects/truepresence-3.png',
-    ],
+    screenshots: ['/screenshots/projects/truepresence-1-card.png', '/screenshots/projects/truepresence-2-card.png', '/screenshots/projects/truepresence-3-card.png'],
+    detailShots: ['/screenshots/projects/truepresence-1.png', '/screenshots/projects/truepresence-2.png', '/screenshots/projects/truepresence-3.png'],
   },
   {
     slug: 'first-active-365',
@@ -42,7 +41,8 @@ export const projects: Project[] = [
     platforms: ['web', 'mobile'],
     year: '2023',
     preview: { frame: 'browser', path: 'firstactive365.co.uk', hue: 120, look: 'list' },
-    screenshots: ['/screenshots/projects/first-active-365.jpg'],
+    screenshots: ['/screenshots/projects/first-active-365-card.png'],
+    detailShots: ['/screenshots/projects/first-active-365.png'],
   },
   {
     slug: 'hyblock-capital',
@@ -51,7 +51,8 @@ export const projects: Project[] = [
     platforms: ['web'],
     year: '2026',
     preview: { frame: 'browser', path: 'hyblockcapital.com', hue: 150, look: 'chart' },
-    screenshots: ['/screenshots/projects/hyblock-capital.jpg'],
+    screenshots: ['/screenshots/projects/hyblock-capital-card.png'],
+    detailShots: ['/screenshots/projects/hyblock-capital.png'],
   },
   {
     slug: 'debt-tracker',
@@ -60,11 +61,8 @@ export const projects: Project[] = [
     platforms: ['mobile'],
     year: '2025',
     preview: { frame: 'phones', hue: 100 },
-    screenshots: [
-      '/screenshots/projects/debt-tracker-1.png',
-      '/screenshots/projects/debt-tracker-2.png',
-      '/screenshots/projects/debt-tracker-3.png',
-    ],
+    screenshots: ['/screenshots/projects/debt-tracker-1-card.png', '/screenshots/projects/debt-tracker-2-card.png', '/screenshots/projects/debt-tracker-3-card.png'],
+    detailShots: ['/screenshots/projects/debt-tracker-1.png', '/screenshots/projects/debt-tracker-2.png', '/screenshots/projects/debt-tracker-3.png'],
   },
   {
     slug: 'triage-clinic',
@@ -73,7 +71,8 @@ export const projects: Project[] = [
     platforms: ['web'],
     year: '2026',
     preview: { frame: 'browser', path: 'triageclinic.me', hue: 170, look: 'list' },
-    screenshots: ['/screenshots/projects/triage-clinic.jpg'],
+    screenshots: ['/screenshots/projects/triage-clinic-card.png'],
+    detailShots: ['/screenshots/projects/triage-clinic.png'],
   },
   {
     slug: 'knextt',

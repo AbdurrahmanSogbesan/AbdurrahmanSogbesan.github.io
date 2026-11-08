@@ -164,7 +164,8 @@ export default async function ProjectPage({ params }: Params) {
           <h2 id="next-label" className="label spaced">
             {ui.nextProject}
           </h2>
-          <Link className="pd-next" href={`/work/${next.slug}/`}>
+          {/* No prefetch: it would load the next project's full-size screenshots in the background. */}
+          <Link className="pd-next" href={`/work/${next.slug}/`} prefetch={false}>
             <span style={{ display: 'flex', flexDirection: 'column', gap: '4px', minWidth: 0 }}>
               <span className="nm">{next.name}</span>
               <span style={{ fontSize: '14px', color: 'var(--muted)', overflowWrap: 'anywhere' }}>

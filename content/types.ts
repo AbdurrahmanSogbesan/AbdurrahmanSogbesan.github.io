@@ -47,7 +47,10 @@ export interface Project {
     /** Skeleton layout inside the browser frame. */
     look?: 'chart' | 'list';
   };
-  /** Real screenshot(s) under /public. Empty = render the skeleton preview. */
+  /**
+   * Card screenshot(s) under /public, sized for the card (web ~720px wide, phones ~300px). Empty = skeleton.
+   * Full-size versions for the project page go in `detailShots`.
+   */
   screenshots: string[];
   /**
    * Project page screenshots under /public, in order. Any number. Not set = the card `screenshots`
