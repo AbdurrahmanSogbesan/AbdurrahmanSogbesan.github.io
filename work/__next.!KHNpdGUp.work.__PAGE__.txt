@@ -1,0 +1,65 @@
+1:"$Sreact.fragment"
+2:"/_next/static/chunks/3qfy96eoyh-ek.js"
+3:I[39756,["$2"],"default"]
+4:I[37457,["$2"],"default"]
+5:"/_next/static/chunks/0tzq7a4xgpx81.js"
+6:I[70119,["$2","$5"],"default"]
+7:"/_next/static/chunks/0jd_9u3h8-wu-.js"
+8:I[22016,["$2","$5","$7"],""]
+c:I[11414,["$2","$5"],"default"]
+1c:"ViewportBoundary"
+1d:I[97367,["$2"],"$1c"]
+1e:"MetadataBoundary"
+1f:I[97367,["$2"],"$1e"]
+20:"$Sreact.suspense"
+:HL["/_next/static/chunks/0sie8f-a81mwv.css","style"]
+a:X
+18:X
+18:C
+19:[["children",{"s":"__PAGE__","h":160,"d":{"r":"$L1a","p":"$@1b","v":null,"s":"$a"}}]]
+15:[["children",{"s":"work","h":96,"d":{"r":"$L16","p":"$@17","v":"$18","s":"$a"},"c":"$Q19"}]]
+b:[["children",{"s":"(site)","h":96,"d":{"r":["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/0tzq7a4xgpx81.js","async":true}]],["$","$Lc",null,{"children":["$","div",null,{"className":"col","children":[["$","$L6",null,{}],["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[["$","div",null,{"className":"col","children":[["$","$L6",null,{}],["$","main",null,{"style":{"padding":"112px 0 0"},"children":[["$","p",null,{"className":"label rise","style":{"animationDelay":"0ms"},"children":"Error 404"}],["$","h1",null,{"className":"nf-title rise","style":{"marginTop":"20px","animationDelay":"50ms"},"children":"Nothing lives here."}],["$","p",null,{"className":"rise","style":{"margin":"24px 0 0","maxWidth":"46ch","animationDelay":"100ms"},"children":"This page was moved, renamed, or never existed. Everything that does is listed below."}],["$","nav",null,{"className":"rise","aria-label":"Pages on this site","style":{"marginTop":"64px","animationDelay":"150ms"},"children":["$","ul",null,{"className":"nf-index","children":[["$","li","01",{"className":"nf-row","children":["$Ld","$Le"]}],"$Lf","$L10","$L11","$L12"]}]}]]}],"$L13"]}],[]]}]]}]}]]}],"p":"$@14","v":null,"s":"$a"},"c":"$Q15"}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0sie8f-a81mwv.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/3qfy96eoyh-ek.js","async":true}]],["$","html",null,{"lang":"en","className":"site c-rD7q_variable fk3-0q_variable eJDReq_variable","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){var d=null;try{var v=localStorage.getItem('as-theme');if(v==='dark'||v==='light')d=v==='dark'}catch(e){}if(d===null){try{d=matchMedia('(prefers-color-scheme: dark)').matches}catch(e){d=false}}if(d)document.documentElement.classList.add('dark')})()"}}]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[["$","div",null,{"className":"col","children":[["$","$L6",null,{}],["$","main",null,{"style":{"padding":"112px 0 0"},"children":[["$","p",null,{"className":"label rise","style":{"animationDelay":"0ms"},"children":"Error 404"}],["$","h1",null,{"className":"nf-title rise","style":{"marginTop":"20px","animationDelay":"50ms"},"children":"Nothing lives here."}],["$","p",null,{"className":"rise","style":{"margin":"24px 0 0","maxWidth":"46ch","animationDelay":"100ms"},"children":"This page was moved, renamed, or never existed. Everything that does is listed below."}],["$","nav",null,{"className":"rise","aria-label":"Pages on this site","style":{"marginTop":"64px","animationDelay":"150ms"},"children":["$","ul",null,{"className":"nf-index","children":[["$","li","01",{"className":"nf-row","children":[["$","span",null,{"className":"mono","style":{"color":"var(--muted)"},"children":"01"}],["$","span",null,{"children":[["$","$L8",null,{"href":"/","className":"nf-link","children":"Home"}]," ",["$","span",null,{"className":"nf-what","children":"What I build, and selected work"}]]}]]}],["$","li","02",{"className":"nf-row","children":[["$","span",null,{"className":"mono","style":{"color":"var(--muted)"},"children":"02"}],["$","span",null,{"children":[["$","$L8",null,{"href":"/work/","className":"nf-link","children":"Work"}]," ",["$","span",null,{"className":"nf-what","children":"All projects"}]]}]]}],["$","li","03",{"className":"nf-row","children":[["$","span",null,{"className":"mono","style":{"color":"var(--muted)"},"children":"03"}],["$","span",null,{"children":[["$","$L8",null,{"href":"/about","className":"nf-link","children":"About"}]," ",["$","span",null,{"className":"nf-what","children":"Experience and toolbox"}]]}]]}],["$","li","04",{"className":"nf-row","children":[["$","span",null,{"className":"mono","style":{"color":"var(--muted)"},"children":"04"}],["$","span",null,{"children":[["$","a",null,{"href":"https://drive.google.com/file/d/153bzAcuj2GULm12cO3MLoM5uEnb0tsNz/view?usp=sharing","target":"_blank","rel":"noopener","className":"nf-link","children":"Résumé"}]," ",["$","span",null,{"className":"nf-what","children":"PDF"}]]}]]}],["$","li","05",{"className":"nf-row","children":[["$","span",null,{"className":"mono","style":{"color":"var(--muted)"},"children":"05"}],["$","span",null,{"children":[["$","a",null,{"href":"mailto:abdurrahmansogbesan@gmail.com","className":"nf-link","children":"Email"}]," ",["$","span",null,{"className":"nf-what","children":"abdurrahmansogbesan@gmail.com"}]]}]]}]]}]}]]}],["$","footer",null,{"style":{"marginTop":"72px","padding":"32px 0 48px","borderTop":"1px solid var(--line)"},"children":["$","p",null,{"className":"mono","style":{"margin":0,"color":"var(--muted)","fontSize":"11.5px"},"children":["Lagos, Nigeria"," · © ",2026]}]}]]}],[]]}]}]]}]]}],"p":"$@9","v":null,"s":"$a"},"c":"$Qb"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1d",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#F6F4EF","media":"(prefers-color-scheme: light)"}],["$","meta","3",{"name":"theme-color","content":"#0A0A0A","media":"(prefers-color-scheme: dark)"}]]}],["$","$L1f",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$20",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Work · Abdurrahman Sogbesan"}],["$","meta","1",{"name":"description","content":"Web and mobile projects by Abdurrahman Sogbesan, a full-stack engineer in Lagos, with the role, stack and work behind each one."}],["$","link","2",{"rel":"canonical","href":"https://abdurrahmansogbesan.github.io/work/"}],["$","meta","3",{"property":"og:title","content":"Work · Abdurrahman Sogbesan"}],["$","meta","4",{"property":"og:description","content":"Web and mobile projects by Abdurrahman Sogbesan, a full-stack engineer in Lagos, with the role, stack and work behind each one."}],"$L21","$L22","$L23","$L24","$L25","$L26","$L27","$L28","$L29","$L2a","$L2b","$L2c","$L2d","$L2e","$L2f","$L30","$L31","$L32","$L33"]}]}],null]}],"$L34"]}],"p":"$@35","v":null,"s":"$a"}},"a":"$@36","u":"$@37","b":"KZhYA5jP7sjeMrjYiUMzs"}
+38:I[639,["$2","$5","$7"],"default"]
+39:I[56691,["$2","$5","$7"],"default"]
+3a:I[97367,["$2"],"OutletBoundary"]
+3c:I[27201,["$2"],"IconMark"]
+d:["$","span",null,{"className":"mono","style":{"color":"var(--muted)"},"children":"01"}]
+e:["$","span",null,{"children":[["$","$L8",null,{"href":"/","className":"nf-link","children":"Home"}]," ",["$","span",null,{"className":"nf-what","children":"What I build, and selected work"}]]}]
+f:["$","li","02",{"className":"nf-row","children":[["$","span",null,{"className":"mono","style":{"color":"var(--muted)"},"children":"02"}],["$","span",null,{"children":[["$","$L8",null,{"href":"/work/","className":"nf-link","children":"Work"}]," ",["$","span",null,{"className":"nf-what","children":"All projects"}]]}]]}]
+10:["$","li","03",{"className":"nf-row","children":[["$","span",null,{"className":"mono","style":{"color":"var(--muted)"},"children":"03"}],["$","span",null,{"children":[["$","$L8",null,{"href":"/about","className":"nf-link","children":"About"}]," ",["$","span",null,{"className":"nf-what","children":"Experience and toolbox"}]]}]]}]
+11:["$","li","04",{"className":"nf-row","children":[["$","span",null,{"className":"mono","style":{"color":"var(--muted)"},"children":"04"}],["$","span",null,{"children":[["$","a",null,{"href":"https://drive.google.com/file/d/153bzAcuj2GULm12cO3MLoM5uEnb0tsNz/view?usp=sharing","target":"_blank","rel":"noopener","className":"nf-link","children":"Résumé"}]," ",["$","span",null,{"className":"nf-what","children":"PDF"}]]}]]}]
+12:["$","li","05",{"className":"nf-row","children":[["$","span",null,{"className":"mono","style":{"color":"var(--muted)"},"children":"05"}],["$","span",null,{"children":[["$","a",null,{"href":"mailto:abdurrahmansogbesan@gmail.com","className":"nf-link","children":"Email"}]," ",["$","span",null,{"className":"nf-what","children":"abdurrahmansogbesan@gmail.com"}]]}]]}]
+13:["$","footer",null,{"style":{"marginTop":"72px","padding":"32px 0 48px","borderTop":"1px solid var(--line)"},"children":["$","p",null,{"className":"mono","style":{"margin":0,"color":"var(--muted)","fontSize":"11.5px"},"children":["Lagos, Nigeria"," · © ",2026]}]}]
+16:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}]
+1a:["$","$1","c",{"children":[[["$","main",null,{"style":{"padding":"88px 0 0"},"children":["$","section",null,{"className":"rise","aria-labelledby":"work-title","style":{"animationDelay":"0ms"},"children":[["$","$L8",null,{"className":"pd-back","href":"/","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],"Home"]}],["$","$L38",null,{}]]}]}],["$","$L39",null,{}]],[["$","script","script-0",{"src":"/_next/static/chunks/0jd_9u3h8-wu-.js","async":true}]],["$","$L3a",null,{"children":["$","$20",null,{"name":"Next.MetadataOutlet","children":"$@3b"}]}]]}]
+21:["$","meta","5",{"property":"og:url","content":"https://abdurrahmansogbesan.github.io/work/"}]
+22:["$","meta","6",{"property":"og:site_name","content":"Abdurrahman Sogbesan"}]
+23:["$","meta","7",{"property":"og:locale","content":"en"}]
+24:["$","meta","8",{"property":"og:image","content":"https://abdurrahmansogbesan.github.io/og-default.png"}]
+25:["$","meta","9",{"property":"og:image:type","content":"image/png"}]
+26:["$","meta","10",{"property":"og:image:width","content":"1200"}]
+27:["$","meta","11",{"property":"og:image:height","content":"630"}]
+28:["$","meta","12",{"property":"og:image:alt","content":"Abdurrahman Sogbesan, Full-stack Engineer in Lagos"}]
+29:["$","meta","13",{"property":"og:type","content":"website"}]
+2a:["$","meta","14",{"name":"twitter:card","content":"summary_large_image"}]
+2b:["$","meta","15",{"name":"twitter:title","content":"Work · Abdurrahman Sogbesan"}]
+2c:["$","meta","16",{"name":"twitter:description","content":"Web and mobile projects by Abdurrahman Sogbesan, a full-stack engineer in Lagos, with the role, stack and work behind each one."}]
+2d:["$","meta","17",{"name":"twitter:image","content":"https://abdurrahmansogbesan.github.io/og-default.png"}]
+2e:["$","meta","18",{"name":"twitter:image:alt","content":"Abdurrahman Sogbesan, Full-stack Engineer in Lagos"}]
+2f:["$","link","19",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}]
+30:["$","link","20",{"rel":"icon","href":"/favicon-32x32.png","sizes":"32x32","type":"image/png"}]
+31:["$","link","21",{"rel":"icon","href":"/favicon-16x16.png","sizes":"16x16","type":"image/png"}]
+32:["$","link","22",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png","sizes":"180x180"}]
+33:["$","$L3c","23",{}]
+34:["$","meta",null,{"name":"next-size-adjust","content":""}]
+a:300
+3b:null
+37:true
+a:C
+36:0
+17:"$undefined"
+14:"$undefined"
+9:"$undefined"
+35:"$undefined"
+1b:"$undefined"
