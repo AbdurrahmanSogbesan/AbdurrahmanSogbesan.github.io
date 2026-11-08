@@ -1,7 +1,7 @@
 // Site-wide copy: identity, links, nav, footer and small UI strings.
 
 /** Résumé on Google Drive (nav, link pill, 404 index). Update the file via Drive → Manage versions to keep this link. */
-const resumeUrl = 'https://drive.google.com/file/d/1z9IlKc1b9b7N8fSVGlUohEQu4L5xIae_/view?usp=sharing';
+const resumeUrl = 'https://drive.google.com/file/d/153bzAcuj2GULm12cO3MLoM5uEnb0tsNz/view?usp=sharing';
 
 export const site = {
   name: 'Abdurrahman Sogbesan',
