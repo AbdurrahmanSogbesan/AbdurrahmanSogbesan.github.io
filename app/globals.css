@@ -245,6 +245,12 @@ html[data-vt="fade"]::view-transition-new(root){animation-duration:150ms;animati
 @media (hover:hover) and (pointer:fine){.mlink:hover{background:var(--chip)}}
 @media (prefers-reduced-motion:reduce){.burger i,.themeglyph{transition:none}.mmenu,.menu-open .mmenu{transform:none!important}.mlink:active{transform:none}}
 @media (max-width:380px){.brandtext{display:none}}
+/* 381–399px (iPhone 12–16): the name only fits on one line if the menu button drops its word. The word stays
+   for screen readers (visually hidden), so the button is still announced "Menu" / "Close". */
+@media (min-width:381px) and (max-width:399px){
+  .menubtn{position:relative;padding:0 13px}
+  .menutext{position:absolute;width:1px;height:1px;min-width:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+}
 @media (max-width:520px){
   .col{padding:0 16px}
   .site main > section:first-child,.site main[style]{padding-top:56px!important}
