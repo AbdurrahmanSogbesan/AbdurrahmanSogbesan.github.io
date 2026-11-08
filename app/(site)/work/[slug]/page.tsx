@@ -65,7 +65,7 @@ export default async function ProjectPage({ params }: Params) {
   const project = projects[index];
   const next = projects[(index + 1) % projects.length];
   // Hero: the first shot (web) or first three (phones). Everything after goes in the gallery.
-  const all = project.detailShots ?? [];
+  const all = project.detailShots ?? project.screenshots;
   const heroCount = project.preview.frame === 'phones' ? 3 : 1;
   const shots = { hero: all.slice(0, heroCount), gallery: all.slice(heroCount) };
   const total = projects.length;

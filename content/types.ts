@@ -50,7 +50,8 @@ export interface Project {
   /** Real screenshot(s) under /public. Empty = render the skeleton preview. */
   screenshots: string[];
   /**
-   * Project page screenshots under /public, in order. Any number; none = no screenshots on the page.
+   * Project page screenshots under /public, in order. Any number. Not set = the card `screenshots`
+   * (so the hero shows the card image); an empty list = no screenshots on the page.
    * Web: the first is the 16:10 hero, the rest a two-across gallery.
    * Phones: the first three are the hero row, the rest follow three to a row (9:19.5).
    */
