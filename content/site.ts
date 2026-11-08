@@ -19,7 +19,7 @@ export const site = {
     { label: 'Résumé', href: resumeUrl, external: true },
   ],
 
-  availability: 'Open to full-time remote roles and contract work',
+  availability: 'Open to software engineering roles',
 
   /** Pill links under the availability line on Home. Order matters. */
   links: [
@@ -50,6 +50,25 @@ export const site = {
     retroClose: 'Close and end retro mode',
     /** Hover-card placeholder tile until a screenshot is supplied: "<company name> landing page". */
     landingPageSuffix: 'landing page',
+
+    /** Home's link to /work/ ("All work 9 →") and the /work/ page heading. */
+    allWork: 'All work',
+    workTitle: 'Work',
+    /** Back links: "← Home" on /work/, "← All work" on each project page. */
+    backHome: 'Home',
+    backToWork: 'All work',
+    /** Project page section labels. */
+    whatIDid: 'What I did',
+    nextProject: 'Next project',
+    /** Project page details rows, in display order. */
+    detailRows: {
+      platform: 'Platform',
+      company: 'Company',
+      role: 'Role',
+      stack: 'Stack',
+      liveUrl: 'Live URL',
+    },
+
     /** Labels for assistive tech only (aria-label on links, navs and groups). */
     a11y: {
       homeLink: 'Abdurrahman Sogbesan, home',
@@ -59,6 +78,10 @@ export const site = {
       pagesIndex: 'Pages on this site',
       /** Followed by the email address. */
       copyEmail: 'Copy email address',
+      /** Project page position ("05 / 09") read as "Project 5 of 9". */
+      projectPosition: { prefix: 'Project', of: 'of' },
+      /** Project page screenshot alt text: "<project name> screenshot 1". */
+      screenshot: 'screenshot',
     },
   },
 
@@ -68,10 +91,14 @@ export const site = {
       home: 'Abdurrahman Sogbesan, a full-stack engineer in Lagos building web and mobile products with TypeScript, React, Next.js and Node.js.',
       about:
         "Abdurrahman Sogbesan's work at Tempo, Codygo, ZeroComplex AI and Pramie, and the toolbox behind it, from database schema to screen.",
+      work: 'Web and mobile projects by Abdurrahman Sogbesan, a full-stack engineer in Lagos, with the role, stack and work behind each one.',
+      // Project pages use the project's card description.
     },
     titles: {
       home: 'Abdurrahman Sogbesan',
       about: 'About · Abdurrahman Sogbesan',
+      work: 'Work · Abdurrahman Sogbesan',
+      // Project pages: "<project name> · Abdurrahman Sogbesan".
       notFound: 'Page not found',
     },
     /** Stack line on the OG images (bottom right). */

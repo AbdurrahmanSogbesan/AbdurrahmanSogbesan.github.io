@@ -11,7 +11,6 @@ export const projects: Project[] = [
     year: '2025',
     preview: { frame: 'browser', path: 'addressable.io', hue: 210, look: 'chart' },
     screenshots: ['/screenshots/projects/addressable.jpg'],
-    url: 'https://www.addressable.io/',
   },
   {
     slug: 'bloco',
@@ -21,7 +20,6 @@ export const projects: Project[] = [
     year: '2023',
     preview: { frame: 'browser', path: 'bloco.co.uk', hue: 265, look: 'chart' },
     screenshots: ['/screenshots/projects/bloco.jpg'],
-    url: 'https://bloco.co.uk/',
   },
   {
     slug: 'truepresence',
@@ -35,7 +33,6 @@ export const projects: Project[] = [
       '/screenshots/projects/truepresence-2.png',
       '/screenshots/projects/truepresence-3.png',
     ],
-    url: 'https://truepresence.com/',
   },
   {
     slug: 'first-active-365',
@@ -45,7 +42,6 @@ export const projects: Project[] = [
     year: '2023',
     preview: { frame: 'browser', path: 'firstactive365.co.uk', hue: 120, look: 'list' },
     screenshots: ['/screenshots/projects/first-active-365.jpg'],
-    url: 'https://firstactive365.co.uk/',
   },
   {
     slug: 'hyblock-capital',
@@ -55,7 +51,6 @@ export const projects: Project[] = [
     year: '2026',
     preview: { frame: 'browser', path: 'hyblockcapital.com', hue: 150, look: 'chart' },
     screenshots: ['/screenshots/projects/hyblock-capital.jpg'],
-    url: 'https://hyblockcapital.com/',
   },
   {
     slug: 'debt-tracker',
@@ -73,12 +68,11 @@ export const projects: Project[] = [
   {
     slug: 'triage-clinic',
     name: 'Triage Clinic',
-    description: 'AI-assisted outpatient triage that turns a patient interview into a clinical note.',
+    description: 'AI patient interviews that produce triage-ready clinical notes.',
     platforms: ['web'],
     year: '2026',
     preview: { frame: 'browser', path: 'triageclinic.me', hue: 170, look: 'list' },
     screenshots: ['/screenshots/projects/triage-clinic.jpg'],
-    url: 'https://www.triageclinic.me/',
   },
   {
     slug: 'knextt',
@@ -88,5 +82,14 @@ export const projects: Project[] = [
     year: '2023',
     preview: { frame: 'browser', path: 'knextt / roster', hue: 190, look: 'list' },
     screenshots: ['/screenshots/projects/knextt.jpg'],
+  },
+  {
+    slug: 'doculess',
+    name: 'Doculess',
+    description: 'AI platform that pulls structured data out of business documents.',
+    platforms: ['web'],
+    year: '2024',
+    preview: { frame: 'browser', path: 'doculess / templates', hue: 345, look: 'list' },
+    screenshots: [],
   },
 ];

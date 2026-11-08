@@ -49,8 +49,24 @@ export interface Project {
   };
   /** Real screenshot(s) under /public. Empty = render the skeleton preview. */
   screenshots: string[];
-  /** Live site. When set, the whole card links to it (new tab). */
-  url?: string;
+}
+
+/**
+ * Detail-page copy for /work/[slug]/, keyed by Project.slug in content/projectDetails.ts.
+ * Detail screenshots aren't listed here: the page reads whatever is in
+ * public/screenshots/projects/<slug>/detail/ at build time.
+ */
+export interface ProjectDetails {
+  /** Company the work was done at. null for personal projects (no Company row). */
+  company: string | null;
+  /** The role held on this project. Title only, no feature names. */
+  role: string;
+  /** Rendered comma-separated in the Stack row. */
+  stack: string[];
+  /** Public site. null = no "Live URL" row. Opens in a new tab. The only source for a project's live link. */
+  liveUrl: string | null;
+  /** "What I did" lines, rendered in order as a dash-marked list. Final copy. */
+  did: string[];
 }
 
 export interface ExperienceEntry {
