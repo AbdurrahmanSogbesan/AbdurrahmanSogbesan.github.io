@@ -1,6 +1,7 @@
 import type { Project } from './types';
 
-// Selected work, in display order. The first `site.ui.initialProjectCount` (6) show on load.
+// Every project, in display order: /work/ lists them all, Home shows the first `site.ui.homeProjectCount` (6),
+// and project pages number and chain them ("Next project") in this order.
 // Meta line under each card: platforms joined with " + " (Web, Mobile), then " · " and the year.
 export const projects: Project[] = [
   {

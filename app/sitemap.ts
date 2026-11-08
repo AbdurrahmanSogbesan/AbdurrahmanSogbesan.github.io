@@ -5,7 +5,7 @@ import { projects, site } from '@/content';
 export const dynamic = 'force-static';
 
 // Every indexable page, with the trailing slash GitHub Pages serves (trailingSlash: true).
-const paths = ['/', '/about/', ...projects.map((p) => `/work/${p.slug}/`)];
+const paths = ['/', '/work/', '/about/', ...projects.map((p) => `/work/${p.slug}/`)];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return paths.map((path) => ({ url: `${site.url}${path}` }));

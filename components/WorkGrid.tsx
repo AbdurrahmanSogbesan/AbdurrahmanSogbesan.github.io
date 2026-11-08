@@ -10,30 +10,35 @@ const FILTERS: Filter[] = ['all', 'web', 'mobile'];
 const matches = (filter: Filter) =>
   filter === 'all' ? projects : projects.filter((p) => p.platforms.includes(filter));
 
-export default function ProjectGrid() {
+/** /work/: the page title with the All / Web / Mobile filters beside it, then every matching project. */
+export default function WorkGrid() {
   const [filter, setFilter] = useState<Filter>('all');
-  const [expanded, setExpanded] = useState(false);
-
-  const limit = site.ui.initialProjectCount;
-  const matching = matches(filter);
-  const visible = filter === 'all' && !expanded ? matching.slice(0, limit) : matching;
-  const hidden = Math.max(0, projects.length - limit);
 
   return (
-    <section className="rise" aria-labelledby="work-label" style={{ padding: '72px 0 0', animationDelay: '100ms' }}>
+    <>
       <div
         style={{
           display: 'flex',
-          alignItems: 'center',
+          alignItems: 'flex-end',
           justifyContent: 'space-between',
           flexWrap: 'wrap',
-          gap: '12px',
-          marginBottom: '28px',
+          gap: '12px 16px',
+          margin: '20px 0 32px',
         }}
       >
-        <h2 id="work-label" className="label">
-          {site.ui.selectedWorkLabel}
-        </h2>
+        <h1
+          id="work-title"
+          style={{
+            margin: 0,
+            fontSize: '22px',
+            fontWeight: 500,
+            lineHeight: 1.4,
+            letterSpacing: '-.015em',
+            color: 'var(--fg)',
+          }}
+        >
+          {site.ui.workTitle}
+        </h1>
         <div
           role="group"
           aria-label={site.ui.a11y.filterProjects}
@@ -55,21 +60,10 @@ export default function ProjectGrid() {
       </div>
 
       <div className="grid">
-        {visible.map((p) => (
-          <ProjectCard key={p.slug} project={p} />
+        {matches(filter).map((p) => (
+          <ProjectCard key={p.slug} project={p} heading="h2" />
         ))}
       </div>
-
-      {filter === 'all' && hidden > 0 && (
-        <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '40px' }}>
-          <button type="button" className="quiet" onClick={() => setExpanded((e) => !e)} aria-expanded={expanded}>
-            {expanded ? site.ui.showLess : site.ui.showAll}
-            <span className="mono" style={{ color: 'var(--muted)', fontSize: '11px' }}>
-              {expanded ? '' : `+${hidden}`}
-            </span>
-          </button>
-        </div>
-      )}
-    </section>
+    </>
   );
 }

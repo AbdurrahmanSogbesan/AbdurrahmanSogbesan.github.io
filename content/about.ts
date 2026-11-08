@@ -18,8 +18,9 @@ export const notFound = {
   body: 'This page was moved, renamed, or never existed. Everything that does is listed below.',
   index: [
     { n: '01', label: 'Home', href: '/', note: 'What I build, and selected work' },
-    { n: '02', label: 'About', href: '/about', note: 'Experience and toolbox' },
-    { n: '03', label: 'Résumé', href: site.resumeUrl, note: 'PDF' },
-    { n: '04', label: 'Email', href: 'mailto:abdurrahmansogbesan@gmail.com', note: 'abdurrahmansogbesan@gmail.com' },
+    { n: '02', label: 'Work', href: '/work/', note: 'All projects' },
+    { n: '03', label: 'About', href: '/about', note: 'Experience and toolbox' },
+    { n: '04', label: 'Résumé', href: site.resumeUrl, note: 'PDF' },
+    { n: '05', label: 'Email', href: 'mailto:abdurrahmansogbesan@gmail.com', note: 'abdurrahmansogbesan@gmail.com' },
   ],
 };

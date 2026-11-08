@@ -75,14 +75,10 @@ html[data-vt="fade"]::view-transition-new(root){animation-duration:150ms;animati
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 20px}
 @media (max-width:620px){.grid{grid-template-columns:minmax(0,1fr)}}
 .card{display:flex;flex-direction:column;gap:14px;min-width:0}
-/* Linked cards keep the card's own colours (not the site link colour). */
-.site a.card{color:inherit}
-/* Linked cards: on hover/focus the name underlines like the company links and a ↗ appears. No lift or frame change. */
-a.card .nm{text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1px;text-underline-offset:4px}
-.cardgo{display:inline-block;margin-left:6px;color:var(--muted);opacity:0;vertical-align:-1px}
-.cardgo svg{display:block}
-a.card:focus-visible .nm{text-decoration-color:currentColor}
-a.card:focus-visible .cardgo{opacity:1}
+/* Cards link to their project page (design/site.css): default colours kept; hover/focus underline the name only. */
+.cardlink{color:inherit!important;border-radius:12px}
+.cardlink .cardtitle{text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1px;text-underline-offset:4px}
+.cardlink:focus-visible .cardtitle{text-decoration-color:currentColor}
 .frame{aspect-ratio:4/3;border-radius:12px;border:1px solid var(--line);background:hsl(var(--h) 24% 90%);overflow:hidden;position:relative}
 .dark .frame{background:hsl(var(--h) 10% 13%)}
 .frame.web{padding:26px 0 0 26px}
@@ -197,8 +193,7 @@ a.card:focus-visible .cardgo{opacity:1}
   .nav:hover{color:var(--accent)!important}
   .iconbtn:hover,.menubtn:hover{background:var(--chip)}
   .inline:hover .nm{color:var(--accent);text-decoration-color:currentColor}
-  a.card:hover .nm{text-decoration-color:currentColor}
-  a.card:hover .cardgo{opacity:1}
+  .cardlink:hover .cardtitle{text-decoration-color:currentColor}
   .co:hover .pop{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0) scale(1);transition:opacity 200ms var(--ease-out) 120ms,transform 200ms var(--ease-out) 120ms,visibility 0s linear 120ms}
   .pillbtn:hover{background:var(--chip)}
   .pillbtn:hover svg{color:var(--fg)}

@@ -38,10 +38,8 @@ export const site = {
   ui: {
     selectedWorkLabel: 'Selected work',
     filters: { all: 'All', web: 'Web', mobile: 'Mobile' },
-    showAll: 'Show all',
-    showLess: 'Show less',
-    /** Number of projects visible before "Show all". */
-    initialProjectCount: 6,
+    /** Number of projects on Home; the rest are on /work/. */
+    homeProjectCount: 6,
     menuOpen: 'Menu',
     menuClose: 'Close',
     themeToDark: 'Switch to dark theme',

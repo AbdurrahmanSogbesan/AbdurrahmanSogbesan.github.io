@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Availability from '@/components/Availability';
 import Footer from '@/components/Footer';
 import LinkPills from '@/components/LinkPills';
-import ProjectGrid from '@/components/ProjectGrid';
 import RichText from '@/components/RichText';
+import SelectedWork from '@/components/SelectedWork';
 import { homeIntro, site } from '@/content';
 import { pageMetadata } from '@/lib/metadata';
 
@@ -40,7 +40,7 @@ export default function HomePage() {
           <LinkPills />
         </section>
 
-        <ProjectGrid />
+        <SelectedWork />
       </main>
       <Footer />
     </>
