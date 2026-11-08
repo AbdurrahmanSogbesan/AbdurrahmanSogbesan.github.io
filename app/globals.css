@@ -95,7 +95,7 @@ a.card:focus-visible .cardgo{opacity:1}
 .wbody{flex:1;display:flex;gap:10px;padding:12px;min-height:0}
 .rail{width:18%;display:flex;flex-direction:column;gap:7px}
 .main{flex:1;display:flex;flex-direction:column;gap:9px;min-width:0}
-.phone{width:29%;aspect-ratio:9/18;background:var(--surface);border:1px solid var(--line2);border-bottom:0;border-radius:16px 16px 0 0;padding:16px 9px 0;display:flex;flex-direction:column;gap:7px}
+.phone{width:29%;aspect-ratio:9/19.5;background:var(--surface);border:1px solid var(--line2);border-bottom:0;border-radius:14% 14% 0 0/6.5% 6.5% 0 0;padding:16px 9px 0;display:flex;flex-direction:column;gap:7px}
 .phone.mid{transform:translateY(-14px)}
 .cardhead{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
 .cardtitle{margin:0;min-width:0;overflow-wrap:anywhere;font-size:15.5px;font-weight:500;color:var(--fg);line-height:1.4}
