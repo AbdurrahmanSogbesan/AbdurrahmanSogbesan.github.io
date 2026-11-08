@@ -65,7 +65,7 @@ export const site = {
   meta: {
     /** <meta name="description"> and og/twitter description, per page. Keep each under ~160 characters. */
     descriptions: {
-      home: 'Abdurrahman Sogbesan, a full-stack engineer in Lagos building web and mobile products with TypeScript, React, Next.js and NestJS.',
+      home: 'Abdurrahman Sogbesan, a full-stack engineer in Lagos building web and mobile products with TypeScript, React, Next.js and Node.js.',
       about:
         "Abdurrahman Sogbesan's work at Tempo, Codygo, ZeroComplex AI and Pramie, and the toolbox behind it, from database schema to screen.",
     },
