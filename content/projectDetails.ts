@@ -6,7 +6,7 @@ export const projectDetails: Record<string, ProjectDetails> = {
   "addressable": {
     company: "Codygo",
     role: "Full-stack Developer",
-    stack: ["React", "TypeScript", "Next.js", "AWS Lambda", "AWS CDK", "ECharts", "React Query"],
+    stack: ["React", "TypeScript", "AWS Lambda", "AWS CDK", "ECharts", "React Query"],
     liveUrl: "https://www.addressable.io/",
     did: [
       "I built most of the dashboards brands use to see how their campaigns are doing, from event analytics to channel attribution. The platform serves over 100 brands and 23 million matched wallets across 7 chains, so these pages handle a lot of data.",
@@ -17,7 +17,7 @@ export const projectDetails: Record<string, ProjectDetails> = {
   "bloco": {
     company: "Pramie Technologies",
     role: "Full-stack Developer",
-    stack: ["React", "Next.js", "TypeScript", "React Query", "Stripe"],
+    stack: ["Next.js", "TypeScript", "React Query", "Stripe"],
     liveUrl: "https://bloco.co.uk/",
     did: [
       "I worked on the admin dashboard promoters use to run their events, building team management, commission tracking and the pages where they brand their own storefront.",
@@ -39,7 +39,7 @@ export const projectDetails: Record<string, ProjectDetails> = {
   "first-active-365": {
     company: "Pramie Technologies",
     role: "Frontend Developer",
-    stack: ["Next.js", "React", "TypeScript", "React Query"],
+    stack: ["Next.js", "TypeScript", "React Query"],
     liveUrl: "https://firstactive365.co.uk/",
     did: [
       "I maintained the web app staffing operators use every day, fixing issues and improving it as new needs came up.",
@@ -49,7 +49,7 @@ export const projectDetails: Record<string, ProjectDetails> = {
   "hyblock-capital": {
     company: "Tempo",
     role: "Frontend Lead",
-    stack: ["React", "Next.js", "TypeScript", "RTK Query", "WebSockets"],
+    stack: ["Next.js", "TypeScript", "RTK Query", "WebSockets"],
     liveUrl: "https://hyblockcapital.com/",
     did: [
       "I built the parts traders use to create a strategy, from picking indicators and setting conditions to running it and seeing the backtest results on a chart.",
@@ -71,7 +71,7 @@ export const projectDetails: Record<string, ProjectDetails> = {
   "knextt": {
     company: "Pramie Technologies",
     role: "Lead Backend Developer, Frontend Developer",
-    stack: ["NestJS", "TypeGraphQL", "PostgreSQL", "Prisma", "Apollo Client", "GraphQL Codegen"],
+    stack: ["NestJS", "TypeGraphQL", "PostgreSQL", "Prisma", "Next.js", "Apollo Client", "GraphQL Codegen"],
     liveUrl: null,
     did: [
       "I built the NestJS GraphQL API that rotates team members through their turns, sends scheduled reminders and syncs with Google Calendar.",
@@ -82,7 +82,7 @@ export const projectDetails: Record<string, ProjectDetails> = {
   "doculess": {
     company: "ZeroComplex AI",
     role: "Frontend Developer",
-    stack: ["React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Appwrite", "Stripe", "Paystack"],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Paystack"],
     liveUrl: null,
     did: [
       "I built the billing side of an AI document extraction platform that has processed over 10,000 documents, including billing history, card validation and adding cards through both Paystack and Stripe.",
