@@ -1,13 +1,8 @@
-import { projectDetails, site, type Project } from '@/content';
+import { projectDetails, type Project } from '@/content';
+import { metaLine } from '@/lib/projects';
 import AppLink from './AppLink';
 import { ArrowUpRight } from './icons';
 import ProjectPreview from './ProjectPreview';
-
-/** "Web + Mobile · 2023" */
-function metaLine(project: Project) {
-  const platforms = project.platforms.map((p) => site.ui.filters[p]).join(' + ');
-  return project.year ? `${platforms} · ${project.year}` : platforms;
-}
 
 export default function ProjectCard({ project }: { project: Project }) {
   const liveUrl = projectDetails[project.slug]?.liveUrl;

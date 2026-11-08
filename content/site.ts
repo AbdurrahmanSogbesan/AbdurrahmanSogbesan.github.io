@@ -82,6 +82,10 @@ export const site = {
       projectPosition: { prefix: 'Project', of: 'of' },
       /** Project page screenshot alt text: "<project name> screenshot 1". */
       screenshot: 'screenshot',
+      /** Project page section names (aria-label). */
+      screenshots: 'Screenshots',
+      projectDetails: 'Project details',
+      moreScreenshots: 'More screens',
     },
   },
 

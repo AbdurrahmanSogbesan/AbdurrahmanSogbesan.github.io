@@ -8,15 +8,24 @@ const ogImages = {
 };
 
 type PageKey = keyof typeof site.meta.descriptions;
+type OgImage = keyof typeof ogImages;
+
+/** Metadata for a page keyed in site.meta (Home, About, Work). */
+export function pageMetadata(page: PageKey, path: string, image: OgImage = 'default'): Metadata {
+  return metadataFor(site.meta.titles[page], site.meta.descriptions[page], path, image);
+}
+
+/** Project pages: "<name> · Abdurrahman Sogbesan", the card description, the default OG image. */
+export function projectMetadata(project: { slug: string; name: string; description: string }): Metadata {
+  return metadataFor(`${project.name} · ${site.name}`, project.description, `/work/${project.slug}/`);
+}
 
 /**
- * Per-page title, description, canonical URL and matching Open Graph / Twitter tags.
+ * Title, description, canonical URL and matching Open Graph / Twitter tags.
  * Next replaces these objects per page rather than merging, so every page sets all of them.
  */
-export function pageMetadata(page: PageKey, path: string, image: keyof typeof ogImages = 'default'): Metadata {
+function metadataFor(title: string, description: string, path: string, image: OgImage = 'default'): Metadata {
   const { url, alt } = ogImages[image];
-  const title = site.meta.titles[page];
-  const description = site.meta.descriptions[page];
   return {
     title,
     description,
