@@ -4,7 +4,6 @@ import type { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/Footer';
 import { projectDetails, projects, site, type Project } from '@/content';
-import { detailShots } from '@/lib/detailShots';
 import { projectMetadata } from '@/lib/metadata';
 import { displayDomain, metaLine, padPosition } from '@/lib/projects';
 
@@ -25,7 +24,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 const ui = site.ui;
 
-/** Web projects get 16:10 slots; phone projects get 9:19.5 screens, three to a row. */
+/** Web projects get 16:10 slots (gallery two across); phone projects get 9:19.5 screens, three to a row. */
 function Shots({
   project,
   srcs,
@@ -39,7 +38,7 @@ function Shots({
 }) {
   const phones = project.preview.frame === 'phones';
   const slot = phones ? 'pd-img pd-tall' : 'pd-img pd-wide';
-  const wrap = phones ? 'pd-phones' : kind === 'gallery' ? 'pd-gallery' : 'pd-stack';
+  const wrap = phones ? 'pd-phones' : kind === 'gallery' ? 'pd-gallery' : undefined;
   return (
     <div className={wrap}>
       {srcs.map((src, i) => (
@@ -65,7 +64,10 @@ export default async function ProjectPage({ params }: Params) {
 
   const project = projects[index];
   const next = projects[(index + 1) % projects.length];
-  const shots = detailShots(slug);
+  // Hero: the first shot (web) or first three (phones). Everything after goes in the gallery.
+  const all = project.detailShots ?? [];
+  const heroCount = project.preview.frame === 'phones' ? 3 : 1;
+  const shots = { hero: all.slice(0, heroCount), gallery: all.slice(heroCount) };
   const total = projects.length;
 
   // Rows render only when they have data; there are no Team or Scale rows.

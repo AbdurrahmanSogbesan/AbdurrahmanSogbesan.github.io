@@ -49,13 +49,15 @@ export interface Project {
   };
   /** Real screenshot(s) under /public. Empty = render the skeleton preview. */
   screenshots: string[];
+  /**
+   * Project page screenshots under /public, in order. Any number; none = no screenshots on the page.
+   * Web: the first is the 16:10 hero, the rest a two-across gallery.
+   * Phones: the first three are the hero row, the rest follow three to a row (9:19.5).
+   */
+  detailShots?: string[];
 }
 
-/**
- * Detail-page copy for /work/[slug]/, keyed by Project.slug in content/projectDetails.ts.
- * Detail screenshots aren't listed here: the page reads whatever is in
- * public/screenshots/projects/<slug>/detail/ at build time.
- */
+/** Detail-page copy for /work/[slug]/, keyed by Project.slug in content/projectDetails.ts. */
 export interface ProjectDetails {
   /** Company the work was done at. null for personal projects (no Company row). */
   company: string | null;
