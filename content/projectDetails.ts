@@ -85,7 +85,7 @@ export const projectDetails: Record<string, ProjectDetails> = {
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Paystack"],
     liveUrl: null,
     did: [
-      "I built the billing side of an AI document extraction platform that has processed over 10,000 documents, including billing history, card validation and adding cards through both Paystack and Stripe.",
+      "I built the billing side of an AI document extraction platform that has processed over 10,000 documents, including billing history, card validation and adding cards through Paystack.",
       "I rebuilt the model settings and training screens, showing each model's training status on its card and adding a way to publish a model once it's ready.",
       "I built the templates pages and connected them to the backend, so people could reuse an extraction setup for a type of document or request a new one.",
       "I also built the teams page for managing members, and tightened login validation and error messages across the app.",

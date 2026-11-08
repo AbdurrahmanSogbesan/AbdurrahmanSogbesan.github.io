@@ -21,7 +21,7 @@ export const projects: Project[] = [
     platforms: ['web', 'mobile'],
     year: '2023',
     preview: { frame: 'browser', path: 'bloco.co.uk', hue: 265, look: 'chart' },
-    screenshots: ['/screenshots/projects/bloco-card.png'],
+    screenshots: ['/screenshots/projects/bloco-card.jpg'],
     detailShots: ['/screenshots/projects/bloco.png'],
   },
   {
