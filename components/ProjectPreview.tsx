@@ -7,7 +7,7 @@ const sk = (style: CSSProperties, key?: number) => <div key={key} className="sk"
 
 function Shot({ src }: { src: string }) {
   // eslint-disable-next-line @next/next/no-img-element -- static export, images.unoptimized
-  return <img src={src} alt="" />;
+  return <img src={src} alt="" loading="lazy" decoding="async" />;
 }
 
 function ChartSkeleton() {

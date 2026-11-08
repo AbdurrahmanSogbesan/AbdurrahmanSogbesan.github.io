@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 import { site } from '@/content';
-import { pageMetadata } from '@/lib/metadata';
 import { themeBootstrapScript } from '@/lib/theme';
 import './globals.css';
 
@@ -11,10 +10,11 @@ const geistMono = Geist_Mono({ subsets: ['latin'], weight: ['400', '500'], varia
 // Subset to the letters "AS": used only by the monogram.
 const unbounded = localFont({ src: './fonts/unbounded-as.woff2', weight: '800', variable: '--font-unbounded' });
 
+// Shared across every page. Per-page title, description, canonical and OG tags come from pageMetadata() in each page.
 export const metadata: Metadata = {
-  ...pageMetadata(site.meta.titles.home, '/'),
   metadataBase: new URL(site.url),
-  description: site.meta.description,
+  title: site.meta.titles.home,
+  description: site.meta.descriptions.home,
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },

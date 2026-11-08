@@ -1,9 +1,13 @@
+import type { Metadata } from 'next';
 import Availability from '@/components/Availability';
 import Footer from '@/components/Footer';
 import LinkPills from '@/components/LinkPills';
 import ProjectGrid from '@/components/ProjectGrid';
 import RichText from '@/components/RichText';
 import { homeIntro, site } from '@/content';
+import { pageMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = pageMetadata('home', '/');
 
 export default function HomePage() {
   return (

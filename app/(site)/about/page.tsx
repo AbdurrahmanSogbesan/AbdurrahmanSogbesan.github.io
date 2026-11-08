@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import ExperienceList from '@/components/ExperienceList';
 import Footer from '@/components/Footer';
 import ToolboxRow from '@/components/ToolboxRow';
-import { about, site, tools } from '@/content';
+import { about, tools } from '@/content';
 import { pageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = pageMetadata(site.meta.titles.about, '/about/', 'about');
+export const metadata: Metadata = pageMetadata('about', '/about/', 'about');
 
 export default function AboutPage() {
   return (

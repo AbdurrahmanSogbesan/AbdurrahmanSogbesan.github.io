@@ -10,7 +10,7 @@ function HoverCard({ company }: { company: Company }) {
       <span className="shot">
         {card.screenshot ? (
           // eslint-disable-next-line @next/next/no-img-element -- static export, images.unoptimized
-          <img src={card.screenshot} alt="" />
+          <img src={card.screenshot} alt="" loading="lazy" decoding="async" />
         ) : (
           `${company.name} ${site.ui.landingPageSuffix}`
         )}
