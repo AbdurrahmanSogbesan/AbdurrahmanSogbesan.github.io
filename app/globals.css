@@ -76,7 +76,16 @@ html[data-vt="fade"]::view-transition-new(root){animation-duration:150ms;animati
 @media (max-width:620px){.grid{grid-template-columns:minmax(0,1fr)}}
 .card{display:flex;flex-direction:column;gap:14px;min-width:0}
 /* Cards link to their project page (design/site.css): default colours kept; hover/focus underline the name only. */
-.cardlink{color:inherit!important;border-radius:12px}
+.cardlink{color:inherit!important;border-radius:12px;transition:transform 160ms var(--ease-out)}
+/* Press feedback (the only tap feedback on touch, where hover is off): between buttons (.97) and full rows (.99). */
+.cardlink:active{transform:scale(.98)}
+/* Arrow nudges: 2px toward where the link goes, on fine-pointer hover only. 150ms in, 120ms back. */
+.nudge{display:inline-block;transition:transform 120ms var(--ease-out)}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .quiet:hover .nudge-r,.pd-next:hover .nudge-r{transform:translateX(2px);transition-duration:150ms}
+  .pd-back:hover .nudge-l{transform:translateX(-2px);transition-duration:150ms}
+  .pd-live:hover .nudge-ur{transform:translate(1.5px,-1.5px);transition-duration:150ms}
+}
 .cardlink .cardtitle{text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1px;text-underline-offset:4px}
 .cardlink:focus-visible .cardtitle{text-decoration-color:currentColor}
 .frame{aspect-ratio:4/3;border-radius:12px;border:1px solid var(--line);background:hsl(var(--h) 24% 90%);overflow:hidden;position:relative}
@@ -118,7 +127,8 @@ html[data-vt="fade"]::view-transition-new(root){animation-duration:150ms;animati
 .nf-title{margin:0;font-size:clamp(40px,9vw,88px);font-weight:500;line-height:1.02;letter-spacing:-.045em;color:var(--fg)}
 .nf-index{margin:0;padding:0;list-style:none;border-bottom:1px solid var(--line)}
 .nf-row{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid var(--line)}
-.nf-link{color:var(--fg)!important;font-size:15.5px;font-weight:500;text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1px;text-underline-offset:4px}
+/* .site prefix: the site-wide `.site a{text-decoration:none}` outranks a bare class and hid this underline. */
+.site .nf-link{color:var(--fg)!important;font-size:15.5px;font-weight:500;text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1px;text-underline-offset:4px}
 .nf-link:focus-visible{text-decoration-color:currentColor}
 .nf-what{color:var(--muted);font-size:14px;overflow-wrap:anywhere}
 @media (hover:hover) and (pointer:fine){.nf-link:hover{text-decoration-color:currentColor}}
@@ -139,7 +149,8 @@ html[data-vt="fade"]::view-transition-new(root){animation-duration:150ms;animati
 .pd-row{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--line);align-items:baseline}
 .pd-row dt{margin:0}
 .pd-row dd{margin:0;font-size:14.5px;line-height:1.6;color:var(--fg);overflow-wrap:anywhere}
-.pd-live{color:var(--fg)!important;text-decoration:underline;text-decoration-color:var(--line2);text-decoration-thickness:1px;text-underline-offset:4px}
+/* Live URL: no underline (user's call); hover feedback is the ↗ nudge, keyboard gets the focus ring. */
+.pd-live{color:var(--fg)!important}
 .pd-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
 .pd-list li{position:relative;padding-left:18px;font-size:15px;line-height:1.65}
 .pd-list li::before{content:'';position:absolute;left:0;top:.8em;width:7px;height:1px;background:var(--muted)}
@@ -150,7 +161,6 @@ html[data-vt="fade"]::view-transition-new(root){animation-duration:150ms;animati
 .pd-next:focus-visible .nm{text-decoration-color:currentColor}
 @media (hover:hover) and (pointer:fine){
   .pd-back:hover{color:var(--fg)!important}
-  .pd-live:hover{text-decoration-color:currentColor}
   .pd-next:hover .nm{text-decoration-color:currentColor}
 }
 @media (max-width:560px){
@@ -230,7 +240,7 @@ html:has(.lightbox[open]){overflow:hidden}
 @media (prefers-reduced-motion:reduce){
   .rise{animation-name:fadein;animation-duration:200ms}
   .dot::after{animation:none}
-  .brand:active,.nav:active,.iconbtn:active,.menubtn:active,.pillbtn:active,.filter:active,.quiet:active,.copy:active,.solid:active,.tclose:active{transform:none}
+  .brand:active,.nav:active,.iconbtn:active,.menubtn:active,.pillbtn:active,.filter:active,.quiet:active,.copy:active,.solid:active,.tclose:active,.cardlink:active{transform:none}
   .pop,.co:focus-within .pop{transform:translate(calc(-50% + var(--nudge,0px)),0)}
   .toast,.toast.show{transform:none}
 }

@@ -22,7 +22,9 @@ export default function SelectedWork() {
           <span className="mono" style={{ color: 'var(--muted)', fontSize: '11px' }}>
             {projects.length}
           </span>
-          <span aria-hidden="true">→</span>
+          <span className="nudge nudge-r" aria-hidden="true">
+            →
+          </span>
         </Link>
       </div>
     </section>

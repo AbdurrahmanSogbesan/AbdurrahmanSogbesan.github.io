@@ -81,7 +81,10 @@ export default async function ProjectPage({ params }: Params) {
             label: ui.detailRows.liveUrl,
             value: (
               <a className="pd-live" href={details.liveUrl} target="_blank" rel="noopener">
-                {displayDomain(details.liveUrl)} ↗
+                {displayDomain(details.liveUrl)}{' '}
+                <span className="nudge nudge-ur" aria-hidden="true">
+                  ↗
+                </span>
               </a>
             ),
           },
@@ -94,7 +97,9 @@ export default async function ProjectPage({ params }: Params) {
       <main style={{ padding: '72px 0 0' }}>
         <div className="pd-crumb rise" style={{ animationDelay: '0ms' }}>
           <Link className="pd-back" href="/work/">
-            <span aria-hidden="true">←</span>
+            <span className="nudge nudge-l" aria-hidden="true">
+              ←
+            </span>
             {ui.backToWork}
           </Link>
           <span className="mono" style={{ color: 'var(--muted)' }}>
@@ -172,7 +177,10 @@ export default async function ProjectPage({ params }: Params) {
               </span>
             </span>
             <span className="mono" style={{ flex: 'none', color: 'var(--muted)' }}>
-              {metaLine(next)} →
+              {metaLine(next)}{' '}
+              <span className="nudge nudge-r" aria-hidden="true">
+                →
+              </span>
             </span>
           </Link>
         </section>
