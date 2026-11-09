@@ -23,7 +23,7 @@ export default function WorkGrid() {
           justifyContent: 'space-between',
           flexWrap: 'wrap',
           gap: '12px 16px',
-          margin: '20px 0 32px',
+          margin: '0 0 32px',
         }}
       >
         <h1

@@ -26,41 +26,45 @@ export default function Header() {
   };
 
   return (
-    <header
-      className={menuOpen ? 'hdr menu-open' : 'hdr'}
-      onKeyDown={onKeyDown}
-      style={{
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: '16px',
-      }}
-    >
-      <Link className="brand" href="/" aria-label={site.ui.a11y.homeLink} onPointerDown={onMarkPointerDown}>
-        <Monogram />
-        <span className="brandtext">
-          <span style={{ fontSize: '14.5px', fontWeight: 500, color: 'var(--fg)' }}>{site.name}</span>
-          <span className="mono" style={{ color: 'var(--muted)' }}>
-            {site.title}
+    <>
+      {/* Tap outside the open menu to close it (≤640px only; hidden by CSS above). */}
+      {menuOpen && <div className="mclickout" aria-hidden="true" onClick={closeMenu} />}
+      <header
+        className={menuOpen ? 'hdr menu-open' : 'hdr'}
+        onKeyDown={onKeyDown}
+        style={{
+          position: 'relative',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '16px',
+        }}
+      >
+        <Link className="brand" href="/" aria-label={site.ui.a11y.homeLink} onPointerDown={onMarkPointerDown}>
+          <Monogram />
+          <span className="brandtext">
+            <span style={{ fontSize: '14.5px', fontWeight: 500, color: 'var(--fg)' }}>{site.name}</span>
+            <span className="mono" style={{ color: 'var(--muted)' }}>
+              {site.title}
+            </span>
           </span>
-        </span>
-      </Link>
-      <nav aria-label={site.ui.a11y.mainNav} style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
-        <span className="navlinks">
-          {site.nav.map((item) => {
-            const { on, ariaCurrent } = navState(pathname, item.href);
-            return (
-              <AppLink key={item.href} className={on ? 'nav on' : 'nav'} href={item.href} aria-current={ariaCurrent}>
-                {item.label}
-              </AppLink>
-            );
-          })}
-        </span>
-        <ThemeToggle />
-        <MenuButton open={menuOpen} onToggle={() => setMenuOpen((o) => !o)} />
-      </nav>
-      <MenuPanel pathname={pathname} onClose={closeMenu} />
-    </header>
+        </Link>
+        <nav aria-label={site.ui.a11y.mainNav} style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
+          <span className="navlinks">
+            {site.nav.map((item) => {
+              const { on, ariaCurrent } = navState(pathname, item.href);
+              return (
+                <AppLink key={item.href} className={on ? 'nav on' : 'nav'} href={item.href} aria-current={ariaCurrent}>
+                  {item.label}
+                </AppLink>
+              );
+            })}
+          </span>
+          <ThemeToggle />
+          <MenuButton open={menuOpen} onToggle={() => setMenuOpen((o) => !o)} />
+        </nav>
+        <MenuPanel pathname={pathname} onClose={closeMenu} />
+      </header>
+    </>
   );
 }

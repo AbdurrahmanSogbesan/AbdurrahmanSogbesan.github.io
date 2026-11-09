@@ -53,8 +53,7 @@ export const site = {
     /** Home's link to /work/ ("All work 9 →") and the /work/ page heading. */
     allWork: 'All work',
     workTitle: 'Work',
-    /** Back links: "← Home" on /work/, "← All work" on each project page. */
-    backHome: 'Home',
+    /** Back link on each project page: "← All work". */
     backToWork: 'All work',
     /** Project page section labels. */
     whatIDid: 'What I did',
