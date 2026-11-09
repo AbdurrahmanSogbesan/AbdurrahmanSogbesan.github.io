@@ -171,12 +171,14 @@ html[data-vt="fade"]::view-transition-new(root){animation-duration:150ms;animati
 .lightbox[data-closing],.lightbox[data-closing]::backdrop{opacity:0;transition-duration:160ms}
 .lightbox[data-closing] img{transform:scale(.97);transition-duration:160ms}
 @starting-style{.lightbox[open],.lightbox[open]::backdrop{opacity:0}.lightbox[open] img{transform:scale(.97)}}
-.lightbox-close{position:fixed;top:16px;right:16px;color:#EDEDED;background:rgba(237,237,237,.12);transition:transform 160ms var(--ease-out)}
-.lightbox-close:active{transform:scale(.97)}
-.lightbox-close:focus-visible{outline:2px solid #EDEDED;outline-offset:3px}
+/* The close button sits on the dark scrim in both themes, so it has fixed light-on-dark colours. Scoped to
+   .lightbox so it outranks the site-wide .iconbtn:hover (theme chip colour) and the 8px focus-ring radius. */
+.lightbox .lightbox-close{position:fixed;top:16px;right:16px;color:#EDEDED;background:rgba(237,237,237,.12);transition:transform 160ms var(--ease-out)}
+.lightbox .lightbox-close:active{transform:scale(.97)}
+.lightbox .lightbox-close:focus-visible{outline:2px solid #EDEDED;outline-offset:3px;border-radius:999px}
 html:has(.lightbox[open]){overflow:hidden}
-@media (hover:hover) and (pointer:fine){.lightbox-close:hover{background:rgba(237,237,237,.2)}}
-@media (prefers-reduced-motion:reduce){.lightbox img,.lightbox[data-closing] img{transform:none}.lightbox-close:active{transform:none}@starting-style{.lightbox[open] img{transform:none}}}
+@media (hover:hover) and (pointer:fine){.lightbox .lightbox-close:hover{background:rgba(237,237,237,.22)}}
+@media (prefers-reduced-motion:reduce){.lightbox img,.lightbox[data-closing] img{transform:none}.lightbox .lightbox-close:active{transform:none}@starting-style{.lightbox[open] img{transform:none}}}
 
 /* ───────── Footer ───────── */
 .copy{display:inline-flex;align-items:center;gap:12px;max-width:100%;background:none;border:0;padding:0;cursor:pointer;font-family:inherit;font-weight:500;font-size:clamp(21px,4.6vw,30px);letter-spacing:-.025em;line-height:1.3;color:var(--fg);text-align:left}
