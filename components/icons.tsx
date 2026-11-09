@@ -36,6 +36,12 @@ export const CopyIcon = (p: IconProps) => (
   </Stroke>
 );
 
+export const CloseIcon = (p: IconProps) => (
+  <Stroke {...p}>
+    <path d="M6 6l12 12M18 6L6 18" />
+  </Stroke>
+);
+
 /** Link-pill icons, keyed by `site.links[].icon`. */
 export const pillIcons = {
   code: (p: IconProps) => (

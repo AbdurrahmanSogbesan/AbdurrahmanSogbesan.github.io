@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/Footer';
+import ZoomShot from '@/components/ZoomShot';
 import { projectDetails, projects, site, type Project } from '@/content';
 import { projectMetadata } from '@/lib/metadata';
 import { displayDomain, metaLine, padPosition } from '@/lib/projects';
@@ -43,12 +44,10 @@ function Shots({
     <div className={wrap}>
       {srcs.map((src, i) => (
         <div key={src} className={slot}>
-          {/* eslint-disable-next-line @next/next/no-img-element -- static export, images.unoptimized */}
-          <img
+          <ZoomShot
             src={src}
             alt={`${project.name} ${ui.a11y.screenshot} ${offset + i + 1}`}
             loading={kind === 'hero' && i === 0 ? 'eager' : 'lazy'}
-            decoding="async"
           />
         </div>
       ))}

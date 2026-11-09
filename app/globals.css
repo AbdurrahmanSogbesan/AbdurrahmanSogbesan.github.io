@@ -159,6 +159,24 @@ html[data-vt="fade"]::view-transition-new(root){animation-duration:150ms;animati
   .pd-phones{gap:8px}
 }
 @media (prefers-reduced-motion:reduce){.pd-back:active,.pd-next:active{transform:none}}
+/* Full-size view: each screenshot is a button that opens a native <dialog>. Not in the design; follows the motion rules. */
+.pd-zoom{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.pd-zoom:focus-visible{outline:none}
+.pd-img:has(.pd-zoom:focus-visible){outline:2px solid var(--accent);outline-offset:3px}
+.lightbox{position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:64px 16px 24px;border:0;background:transparent;cursor:zoom-out;
+  opacity:0;transition:opacity 150ms var(--ease-out),overlay 150ms allow-discrete,display 150ms allow-discrete}
+.lightbox[open]{display:grid;place-items:center;opacity:1;transition-duration:220ms}
+.lightbox::backdrop{background:rgba(10,10,10,.86);opacity:0;transition:opacity 150ms var(--ease-out),overlay 150ms allow-discrete,display 150ms allow-discrete}
+.lightbox[open]::backdrop{opacity:1;transition-duration:220ms}
+.lightbox img{display:block;max-width:min(100%,1440px);max-height:calc(100dvh - 88px);width:auto;height:auto;border-radius:12px;transform:scale(.97);transition:transform 150ms var(--ease-out)}
+.lightbox[open] img{transform:none;transition-duration:220ms}
+@starting-style{.lightbox[open],.lightbox[open]::backdrop{opacity:0}.lightbox[open] img{transform:scale(.97)}}
+.lightbox-close{position:fixed;top:16px;right:16px;color:#EDEDED;background:rgba(237,237,237,.12);transition:transform 160ms var(--ease-out)}
+.lightbox-close:active{transform:scale(.97)}
+.lightbox-close:focus-visible{outline:2px solid #EDEDED;outline-offset:3px}
+html:has(.lightbox[open]){overflow:hidden}
+@media (hover:hover) and (pointer:fine){.lightbox-close:hover{background:rgba(237,237,237,.2)}}
+@media (prefers-reduced-motion:reduce){.lightbox img,.lightbox[open] img{transform:none}.lightbox-close:active{transform:none}@starting-style{.lightbox[open] img{transform:none}}}
 
 /* ───────── Footer ───────── */
 .copy{display:inline-flex;align-items:center;gap:12px;max-width:100%;background:none;border:0;padding:0;cursor:pointer;font-family:inherit;font-weight:500;font-size:clamp(21px,4.6vw,30px);letter-spacing:-.025em;line-height:1.3;color:var(--fg);text-align:left}
