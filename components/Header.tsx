@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useState, type KeyboardEvent } from 'react';
 import { site } from '@/content';
 import { useRetro, useSevenTaps } from '@/hooks/useRetroMode';
-import { isCurrentPath } from '@/lib/links';
+import { navState } from '@/lib/links';
 import AppLink from './AppLink';
 import { MenuButton, MenuPanel } from './MobileMenu';
 import Monogram from './Monogram';
@@ -49,14 +49,9 @@ export default function Header() {
       <nav aria-label={site.ui.a11y.mainNav} style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
         <span className="navlinks">
           {site.nav.map((item) => {
-            const on = isCurrentPath(pathname, item.href);
+            const { on, ariaCurrent } = navState(pathname, item.href);
             return (
-              <AppLink
-                key={item.href}
-                className={on ? 'nav on' : 'nav'}
-                href={item.href}
-                aria-current={on ? 'page' : undefined}
-              >
+              <AppLink key={item.href} className={on ? 'nav on' : 'nav'} href={item.href} aria-current={ariaCurrent}>
                 {item.label}
               </AppLink>
             );

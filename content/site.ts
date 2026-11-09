@@ -15,6 +15,7 @@ export const site = {
 
   nav: [
     { label: 'Home', href: '/' },
+    { label: 'Work', href: '/work/' },
     { label: 'About', href: '/about' },
     { label: 'Résumé', href: resumeUrl, external: true },
   ],
@@ -80,6 +81,9 @@ export const site = {
       projectPosition: { prefix: 'Project', of: 'of' },
       /** Project page screenshot alt text: "<project name> screenshot 1". */
       screenshot: 'screenshot',
+      /** Project page screenshots open full size: "View full size: <alt>" on the image, then a close button. */
+      viewFullSize: 'View full size',
+      closeFullSize: 'Close full-size image',
       /** Project page section names (aria-label). */
       screenshots: 'Screenshots',
       projectDetails: 'Project details',

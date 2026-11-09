@@ -13,3 +13,14 @@ export function isCurrentPath(pathname: string, href: string) {
   const strip = (p: string) => (p.length > 1 ? p.replace(/\/+$/, '') : p);
   return strip(pathname) === strip(href);
 }
+
+/**
+ * Nav highlight: the page itself, or a page inside its section (Work stays on for /work/<slug>/).
+ * aria-current="page" is only for the exact page.
+ */
+export function navState(pathname: string, href: string) {
+  const strip = (p: string) => (p.length > 1 ? p.replace(/\/+$/, '') : p);
+  const current = isCurrentPath(pathname, href);
+  const inSection = isInternalRoute(href) && strip(href) !== '/' && strip(pathname).startsWith(`${strip(href)}/`);
+  return { on: current || inSection, ariaCurrent: current ? ('page' as const) : undefined };
+}

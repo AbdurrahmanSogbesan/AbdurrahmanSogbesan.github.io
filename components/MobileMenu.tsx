@@ -1,7 +1,7 @@
 'use client';
 
 import { site } from '@/content';
-import { isCurrentPath } from '@/lib/links';
+import { navState } from '@/lib/links';
 import AppLink from './AppLink';
 
 export const MOBILE_MENU_ID = 'mobile-menu';
@@ -24,13 +24,13 @@ export function MenuPanel({ pathname, onClose }: { pathname: string; onClose: ()
   return (
     <nav id={MOBILE_MENU_ID} className="mmenu" aria-label={site.ui.a11y.mobileNav}>
       {site.nav.map((item) => {
-        const on = isCurrentPath(pathname, item.href);
+        const { on, ariaCurrent } = navState(pathname, item.href);
         return (
           <AppLink
             key={item.href}
             className={on ? 'mlink on' : 'mlink'}
             href={item.href}
-            aria-current={on ? 'page' : undefined}
+            aria-current={ariaCurrent}
             onClick={onClose}
           >
             {item.label}
