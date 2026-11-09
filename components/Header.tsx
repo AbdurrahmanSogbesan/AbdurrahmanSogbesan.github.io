@@ -10,6 +10,7 @@ import AppLink from './AppLink';
 import { MenuButton, MenuPanel } from './MobileMenu';
 import Monogram from './Monogram';
 import ThemeToggle from './ThemeToggle';
+import LinkPending from './LinkPending';
 
 export default function Header() {
   const pathname = usePathname();
@@ -48,6 +49,7 @@ export default function Header() {
               {site.title}
             </span>
           </span>
+          <LinkPending />
         </Link>
         <nav aria-label={site.ui.a11y.mainNav} style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
           <span className="navlinks">

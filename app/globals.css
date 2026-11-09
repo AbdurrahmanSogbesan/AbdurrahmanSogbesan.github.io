@@ -79,6 +79,12 @@ html[data-vt="fade"]::view-transition-new(root){animation-duration:150ms;animati
 .cardlink{color:inherit!important;border-radius:12px;transition:transform 160ms var(--ease-out)}
 /* Press feedback (the only tap feedback on touch, where hover is off): between buttons (.97) and full rows (.99). */
 .cardlink:active{transform:scale(.98)}
+/* Pending navigation (LinkPending inside next/link): a slow click dims the link slightly. Opacity only, after a
+   100ms delay so prefetched (instant) clicks never flicker; clears instantly. An animation, not a transition, so it
+   doesn't replace a link's own transitions (the card press). */
+.lp{display:none}
+a:has(> .lp[data-pending]){animation:lp-dim 120ms var(--ease-out) 100ms both}
+@keyframes lp-dim{to{opacity:.6}}
 /* Arrow nudges: 2px toward where the link goes, on fine-pointer hover only. 150ms in, 120ms back. */
 .nudge{display:inline-block;transition:transform 120ms var(--ease-out)}
 @media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){

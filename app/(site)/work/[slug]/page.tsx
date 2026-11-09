@@ -7,6 +7,7 @@ import ZoomShot from '@/components/ZoomShot';
 import { projectDetails, projects, site, type Project } from '@/content';
 import { projectMetadata } from '@/lib/metadata';
 import { displayDomain, metaLine, padPosition } from '@/lib/projects';
+import LinkPending from '@/components/LinkPending';
 
 // One static page per project (design/Project.dc.html). Unknown slugs 404 instead of rendering on demand.
 export const dynamicParams = false;
@@ -101,6 +102,7 @@ export default async function ProjectPage({ params }: Params) {
               ←
             </span>
             {ui.backToWork}
+            <LinkPending />
           </Link>
           <span className="mono" style={{ color: 'var(--muted)' }}>
             <span aria-hidden="true">
@@ -182,6 +184,7 @@ export default async function ProjectPage({ params }: Params) {
                 →
               </span>
             </span>
+            <LinkPending />
           </Link>
         </section>
       </main>

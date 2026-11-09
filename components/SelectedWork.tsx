@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { projects, site } from '@/content';
 import ProjectCard from './ProjectCard';
+import LinkPending from './LinkPending';
 
 /** Home: the first few projects, no filters, and a link to /work/ for the rest. */
 export default function SelectedWork() {
@@ -25,6 +26,7 @@ export default function SelectedWork() {
           <span className="nudge nudge-r" aria-hidden="true">
             →
           </span>
+          <LinkPending />
         </Link>
       </div>
     </section>

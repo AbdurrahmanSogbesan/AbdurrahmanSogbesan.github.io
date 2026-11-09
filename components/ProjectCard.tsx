@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Project } from '@/content';
 import { metaLine } from '@/lib/projects';
 import ProjectPreview from './ProjectPreview';
+import LinkPending from './LinkPending';
 
 /**
  * The whole card links to the project page (`a.card.cardlink`). Hover and focus underline the name only.
@@ -22,6 +23,7 @@ export default function ProjectCard({ project, heading: Title = 'h3' }: { projec
           {project.description}
         </p>
       </div>
+      <LinkPending />
     </Link>
   );
 }
