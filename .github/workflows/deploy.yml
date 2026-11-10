@@ -1,7 +1,5 @@
-# Builds the static export and publishes out/ to GitHub Pages.
-# Dormant until launch: it only runs on pushes to main (which doesn't carry this file yet) or by hand.
-# Launch checklist: tag the old main `legacy-site`, force-push main, set Settings → Pages → Source
-# to "GitHub Actions" (if the first run fails because Pages isn't switched yet, re-run it afterwards).
+# Builds the static export and publishes out/ to GitHub Pages (Settings → Pages → Source: GitHub Actions).
+# Runs on every push to main, or by hand from the Actions tab. This is the only way the site gets published.
 name: Deploy to GitHub Pages
 
 on:
